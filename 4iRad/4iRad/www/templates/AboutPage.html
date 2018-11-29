@@ -1,0 +1,11 @@
+<div>
+  <h2>About</h2>
+  <p>This is the about page.</p>
+  <button class="btn btn-primary">
+    ${this.showDetails ? 'Hide details' : 'Show details'}
+  </button>
+  ${!this.showDetails ? '' :`<section>
+    <h4 class="mt-3">All the gory details</h4>
+    <p>Now you know it all.</p>
+  </section>`}
+</div>
