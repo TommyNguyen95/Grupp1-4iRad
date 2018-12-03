@@ -1,6 +1,6 @@
 body {
     display: flex;
-    min-height: 100vh;
+    min-height: 10vh;
     flex-direction: column;
     main {
         flex: 1; 
@@ -21,7 +21,7 @@ body {
         order: 2;
         font-size: 8px;
     }
-    .Classictext {
+    .Connectfour {
         order: 12;
         font-size: 8px;
     }
@@ -36,7 +36,7 @@ footer p {
 }
 
 @media only screen and (max-width: 992px) {
-    .Classictext {
+    .Connectfour {
         font-size: 10px;
     }
     .connect {
@@ -48,7 +48,7 @@ footer p {
 }
 
 @media only screen and  (max-width: 1200px) {
-    .Classictext {
+    .Connectfour {
         font-size: 13px;
     }
     .connect {
