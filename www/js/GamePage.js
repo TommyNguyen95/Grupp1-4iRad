@@ -10,7 +10,7 @@ class GamePage extends Component {
 
 
 
-  renderBoard() {
+ renderBoard() {
 
     let gameBox = `<div class="game-box"></div>`; //7
     let horiRow = `<tr class="hori-row"></tr>`   //6
