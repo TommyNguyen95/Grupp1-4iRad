@@ -60,5 +60,8 @@ typings/
 # next.js build output
 .next
 
+www/css/style\.css
+
+/www/css
 style.css
 style.css.map
