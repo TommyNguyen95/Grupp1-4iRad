@@ -25,7 +25,7 @@ class GamePage extends Component {
 
         if (count <= 42 ) {
 
-          $('.row').append(gameBox).addClass(boxClass);
+          $('.row').append(gameBox).addClass(`${boxClass}`);
           
           count++
           boxClass++;
