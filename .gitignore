@@ -61,3 +61,8 @@ typings/
 .next
 
 www/css/style\.css
+<<<<<<< HEAD
+=======
+
+/www/css
+>>>>>>> Dev
