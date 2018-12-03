@@ -12,18 +12,19 @@ class GamePage extends Component {
 
  renderBoard() {
 
-  let gameBox = `<div class="game-box"></div>`; //7
-   
-  let slots = []
-
-  for (let row = 0; row < 6; row++) {
-    for (let col = 0; col < 7; col++) {
-      // slots.push(new Slot(row, col));
-      // console.log('wihoo')
-    }
-  }
-
   
+    $(function () {
+   
+      let slots = []
+  
+      for (let row = 0; row < 6; row++) {
+        for (let col = 0; col < 7; col++) {
+          // slots.push(new Slot(row, col));
+          // console.log('wihoo')
+        }
+      }
+
+    })
   }
   
 }
