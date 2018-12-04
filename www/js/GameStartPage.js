@@ -4,4 +4,6 @@ class GameStartPage extends Component {
         super();
         this.addRoute('/play', 'Play');
     }
+
+    
 }
