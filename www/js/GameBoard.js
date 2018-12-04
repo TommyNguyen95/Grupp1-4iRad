@@ -20,8 +20,9 @@ class GameBoard extends Component {
 
   renderBoard() {
     for (let row = 0; row < 6; row++) {
+      this.slots[row] = [];
       for (let col = 0; col < 7; col++) {
-        this.slots.push(new Slots(row, col));
+        this.slots[row][col].push(new Slots(row, col));
 
         console.log('wihoo')
 
@@ -76,6 +77,21 @@ class GameBoard extends Component {
       }
     }
 
+    //diagonally up
+    for (i = 1; i < 3; i++) {      
+      for (col = 0; col < 4; col++) {        
+        for (row = 3; row < 6; row++) {          
+          if (this.slots[row][col].value == i) {
+            if ((this.slots[row - 1][col + 1].value == i) && (this.slots[row - 2][col + 2].value == i) && (this.slots[row - 3][col + 3].value == i)) {
+              gameOver(i);
+              return true;
+            }
+          }
+        }
+      }
+    }
   }
+
+  
 
 }
