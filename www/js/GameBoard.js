@@ -45,8 +45,8 @@ class GameBoard extends Component {
       this.col6.push(new Slots(col));
       this.col7.push(new Slots(col));
     }
-   
-    
+
+
   }
 
 }
