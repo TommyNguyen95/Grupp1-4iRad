@@ -33,6 +33,23 @@ class GameBoard extends Component {
 
   }
 
+  /*
+  renderBoard() {
+    for (let row = 0; row < 6; row++) {
+      this.slots[row] = [];
+      for (let col = 0; col < 7; col++) {
+        this.slots[row][col].push(new Slots(row, col));
+
+        console.log('wihoo')
+
+
+      }
+
+    }
+
+
+  }
+*/
 
 
   renderBoard() {
