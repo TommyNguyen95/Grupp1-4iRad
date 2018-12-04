@@ -2,8 +2,7 @@ class GameBoard extends Component {
 
   constructor() {
     super();
-    this.addRoute('/play', 'Play');
-
+    this.addRoute('/gameboard', 'Gameboard');
 
     this.col1 = [
 
