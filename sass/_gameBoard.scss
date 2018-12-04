@@ -1,0 +1,17 @@
+.game-board{
+  width:600px ;
+  background-color: darkcyan;
+  
+
+}
+
+.empty-slots{
+  width:calc(100%/7);
+  padding-top: calc(100%/7);
+  border: 1px solid black;
+  background-color:white;
+  border-radius: 50%; 
+  
+}
+
+
