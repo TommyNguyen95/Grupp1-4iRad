@@ -5,8 +5,25 @@ class GameBoard extends Component {
     this.addRoute('/play', 'Play');
 
 
+    this.col1 = [
 
-    this.slots = [
+    ]
+    this.col2 = [
+
+    ]
+    this.col3 = [
+
+    ]
+    this.col4 = [
+
+    ]
+    this.col5 = [
+
+    ]
+    this.col6 = [
+
+    ]
+    this.col7 = [
 
     ]
 
@@ -19,15 +36,14 @@ class GameBoard extends Component {
 
 
   renderBoard() {
-    for (let row = 0; row < 6; row++) {
-      for (let col = 0; col < 7; col++) {
-        this.slots.push(new Slots(row, col));
-
-        console.log('wihoo')
-        
-    
-      }
-      
+    for (let col = 0; col < 6; col++) {
+      this.col1.push(new Slots(col));
+      this.col2.push(new Slots(col));
+      this.col3.push(new Slots(col));
+      this.col4.push(new Slots(col));
+      this.col5.push(new Slots(col));
+      this.col6.push(new Slots(col));
+      this.col7.push(new Slots(col));
     }
    
     
