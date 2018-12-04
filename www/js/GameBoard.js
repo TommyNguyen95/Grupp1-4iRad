@@ -24,13 +24,13 @@ class GameBoard extends Component {
         this.slots.push(new Slots(row, col));
 
         console.log('wihoo')
-        
-    
+
+
       }
-      
+
     }
-   
-    
+
+
   }
 
 }
