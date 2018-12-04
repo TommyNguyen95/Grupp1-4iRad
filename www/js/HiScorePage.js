@@ -2,7 +2,7 @@ class HiScorePage extends Component {
 
     constructor(){
         super();
-        this.addRoute('/', 'hiscore');
+        this.addRoute('/hiscore', 'hiscore');
       }
 
 }
