@@ -1,14 +1,16 @@
 class GameStartPage extends Component {
 
-    constructor(name, type) {
+    constructor() {
         super();
         this.addRoute('/play', 'Play');
 
-
-        this.name = name;
-        this.type = type;
     }
 
-
+    // create a method thats create objects
+    onFormSend() {
+        let p1 = new Player('name1');
+        let p2 = new Player('name2');
+        this.game = new Game([p1, p2]);
+    }
 
 }
