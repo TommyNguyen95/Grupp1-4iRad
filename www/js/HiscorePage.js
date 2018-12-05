@@ -1,4 +1,4 @@
-class HiScorePage extends Component {
+class HiscorePage extends Component {
 
     constructor(){
       super();
