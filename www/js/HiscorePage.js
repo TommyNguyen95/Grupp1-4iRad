@@ -4,5 +4,5 @@ class HiscorePage extends Component {
       super();
       this.addRoute('/hiscore', 'hiscore');
     }
-  
+    
   }
