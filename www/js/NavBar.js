@@ -1,6 +1,6 @@
 class NavBar extends Component {
 
-  constructor(){
+  constructor() {
     super();
     this.navItems = [
       new NavItem('Start', '/'),
@@ -10,5 +10,4 @@ class NavBar extends Component {
       new NavItem('DavGame', '/davGame')
     ];
   }
-
 }
