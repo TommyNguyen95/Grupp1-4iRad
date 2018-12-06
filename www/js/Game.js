@@ -2,8 +2,8 @@ class Game extends Component {
 
   constructor() {
     super();
-    this.addRoute('/game', 'Game');
     this.gameBoard = new GameBoard();
+
     this.addEvents({
       'click .col0': 'dropCoinStart0',
       'click .col1': 'dropCoinStart1',
@@ -14,12 +14,15 @@ class Game extends Component {
       'click .col6': 'dropCoinStart6',
       'click .restartButton': 'startGame'
     });
+
+
     this.activePlayer = 1;
     this.winner = 0;
     this.moveCounter1 = 0;
     this.moveCounter2 = 0;
     this.winCount = 0;
     this.board = this.gameBoard.board;
+
     this.startGame();
   }
 
