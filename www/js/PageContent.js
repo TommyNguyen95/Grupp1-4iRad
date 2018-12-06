@@ -7,8 +7,6 @@ class PageContent extends Component {
     this.missingPage = new MissingPage();
     this.gameBoard = new GameBoard();
     this.hiscorePage = new HiScorePage();
-    
-    this.game = new Game();
   }
 
 }
