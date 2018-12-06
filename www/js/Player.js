@@ -1,8 +1,9 @@
-class Player extends Component {
+class Player {
 
-    constructor(name, color) {
-        super();
+    constructor(name, type, playerNumber) {
+        
         this.name = name;
-        this.color = color;
+        this.type = type;
+        this.playerNumber = playerNumber;
     }
 }
