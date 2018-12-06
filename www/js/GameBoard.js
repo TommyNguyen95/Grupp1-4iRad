@@ -2,7 +2,6 @@ class GameBoard {
 
   constructor() {
     this.board = [];
-    
     this.renderBoard();
   }
 
@@ -12,14 +11,6 @@ class GameBoard {
       for (let col = 0; col < 7; col++) {
         this.board[row][col] = new Slot(this, col);
       }
-
     }
-      
-
   }
 }
-
-
-
-
-  

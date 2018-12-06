@@ -1,7 +1,6 @@
 class HumanPlayer extends Player {
-
-    constructor() {
-
-        super();
-    }
+  
+  constructor() {
+    super();
+  }
 }
