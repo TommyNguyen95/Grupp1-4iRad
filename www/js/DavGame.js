@@ -1,3 +1,4 @@
+/*
 class DavGame extends Component {
 
   constructor() {
@@ -170,3 +171,4 @@ startGame(){
 
 } 
 
+*/
