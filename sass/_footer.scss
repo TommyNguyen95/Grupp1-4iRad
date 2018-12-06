@@ -1,62 +1,14 @@
-body {
+body > div {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    main {
-        flex: 1; 
-    }
 }
 
-.big-icon {
-    font-size: 26px;
-    margin-top: 5px;
+main {
+    flex: 1; 
 }
 
-.big-icon:active {
-    transform: translateY(2px);
-}
-
-@media only screen and (max-width: 768px) {
-    .icons {
-        order: 2;
-        font-size: 8px;
-    }
-    .Connectfour {
-        order: 12;
-        font-size: 8px;
-    }
-    .connect {
-        order: 1;
-        font-size: 8px;
-    }
-}
-
-footer p {
-    margin-bottom: 0px;
-}
-
-
-
-@media only screen and (max-width: 992px) {
-    .Connectfour {
-        font-size: 10px;
-    }
-    .connect {
-        font-size: 10px;
-    }
-    .icons {
-        font-size: 10px;
-    }
-}
-
-@media only screen and  (max-width: 1200px) {
-    .Connectfour {
-        font-size: 13px;
-    }
-    .connect {
-        font-size: 13px;
-    }
-    .icons {
-        font-size: 13px;
-    }
+footer{
+    color: white;
+    font-size: 20px;
 }
