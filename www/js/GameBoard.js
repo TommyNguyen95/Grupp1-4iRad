@@ -2,7 +2,7 @@ class GameBoard extends Component {
 
   constructor() {
     super();
-    this.addRoute('/play', 'Play');
+    this.addRoute('/gameBoard');
     this.addEvents({
       'click .empty-slots': 'turn'
     });
