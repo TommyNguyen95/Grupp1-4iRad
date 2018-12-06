@@ -61,6 +61,15 @@ typings/
 .next
 
 www/css/style\.css
+<<<<<<< HEAD
+=======
+
+www/css/style\.css
+
+www/css/style\.css
 
 /www/css
->>>>>>> Dev
+style.css
+style.css.map
+
+www/css/style\.css

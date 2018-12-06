@@ -5,6 +5,7 @@ class Router {
     // be rerendered on route changes
     this.mainInstance = mainInstance;
     this.listenToATagClicks();
+    this.listenToLinkButtonClicks();
     this.listenToBackForward();
     this.setPath(location.pathname);
   }
@@ -12,6 +13,20 @@ class Router {
   listenToATagClicks(){
     let that = this;
     $(document).on('click', 'a', function(e){
+      // assume all links starting with '/' are internal
+      let link = $(this).attr('href');
+      if(link.indexOf('/') === 0){
+        e.preventDefault(); // no hard reload of page
+        history.pushState(null, null, link); // change url (no reload)
+        that.setPath(link);
+        that.mainInstance.render();
+      }
+    });
+  }
+
+  listenToLinkButtonClicks(){
+    let that = this;
+    $(document).on('click', '.link-button', function(e){
       // assume all links starting with '/' are internal
       let link = $(this).attr('href');
       if(link.indexOf('/') === 0){
