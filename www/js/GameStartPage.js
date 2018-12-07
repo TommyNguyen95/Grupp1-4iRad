@@ -12,10 +12,11 @@ class GameStartPage extends Component {
 
 
     startGame() {
-        let p1 = new Player(this.baseEl.find('#name1').val());
-        let p2 = new Player(this.baseEl.find('#name2').val());
-        this.game = new Game([p1, p2]);
-        console.log(this.game);
+        this.player1 = (this.baseEl.find('#type1').val() === 'Human') ? (new Player(this.baseEl.find('#name1').val(), 1)) : (new Bot(1));
+        this.player2 = (this.baseEl.find('#type2').val() === 'Human') ? (new Player(this.baseEl.find('#name2').val(), 2)) : (new Bot(2));        
+        this.game = new Game();
+        console.log(this.player1);
+        console.log(this.player2);        
         this.render();
     }
     // when I quit the game this method will bring back the form
