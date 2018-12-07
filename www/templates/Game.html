@@ -1,7 +1,7 @@
 <div class="the-real-game">
 
   <div class="current-player">
-    Current player: ${this.activePlayer}
+    Current player: ${this.playerName}
   </div>
   <div class="modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
@@ -13,7 +13,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>Congrats player ${this.winner}, you win!</p>
+          <p>Congrats ${this.winner}, you win!</p>
           <p>You did it in ${this.winCount} moves</p>
         </div>
         <div class="modal-footer">

@@ -1,8 +1,10 @@
 class Game extends Component {
 
-  constructor() {
+  constructor(player1, player2) {
     super();
     this.gameBoard = new GameBoard();
+    this.player1 = player1;
+    this.player2 = player2;
 
     this.addEvents({
       'click .col0': 'dropCoinStart0',
@@ -15,7 +17,7 @@ class Game extends Component {
       'click .restartButton': 'startGame'
     });
 
-
+    this.playerName = this.player1.name;
     this.activePlayer = 1;
     this.winner = 0;
     this.moveCounter1 = 0;
@@ -65,6 +67,7 @@ class Game extends Component {
         }
         this.board[row][col].value = this.activePlayer;
         this.activePlayer = (this.activePlayer === 1) ? 2 : 1;
+        this.playerName = (this.activePlayer === 1) ? this.player1.name : this.player2.name;
         this.render();
         this.detectWin();
         return true;
@@ -133,13 +136,8 @@ class Game extends Component {
   }
 
   gameOver(player) {
-    if (player === 1) {
-      this.winCount = this.moveCounter1;
-    }
-    if (player === 2) {
-      this.winCount = this.moveCounter2;
-    }
-    this.winner = player;
+    this.winCount = (player === 1) ? this.moveCounter1 : this.moveCounter2;    
+    this.winner = (player === 1) ? this.player1.name : this.player2.name;
     this.render();
     $('.modal').modal('show');
 
