@@ -145,6 +145,7 @@ class Game extends Component {
 
   startGame() {
     this.gameBoard.renderBoard();
+    this.playerName = this.player1.name;
     this.activePlayer = 1;
     this.winner = 0;
     this.moveCounter1 = 0;
