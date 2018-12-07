@@ -29,7 +29,7 @@ class GameStartPage extends Component {
             return;
         }
         try {
-            if(this.baseEl.find('#type1').val() === 'Choose type..' || this.baseEl.find('#type2').val() === 'Choose type..'){
+            if(this.baseEl.find('#type1').val() === 'Choose type...' || this.baseEl.find('#type2').val() === 'Choose type...'){
                 throw 'You must choose types'; 
             }
         }
