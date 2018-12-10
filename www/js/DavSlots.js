@@ -1,4 +1,4 @@
-
+/*
 class DavSlots extends Component {
 
   constructor(gameBoard, col) {
@@ -9,3 +9,4 @@ class DavSlots extends Component {
     this.gameBoard=gameBoard;
   }
 }
+*/

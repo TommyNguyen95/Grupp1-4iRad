@@ -5,5 +5,4 @@ class Bot {
     this.type = 'Computer';
     this.playerNumber = playerNumber;
   }
-  
 }
