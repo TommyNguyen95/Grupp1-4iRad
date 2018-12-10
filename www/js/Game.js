@@ -18,9 +18,9 @@ class Game extends Component {
       'click .restartButton': 'startGame'
     });
 
-
+    this.playerName = this.player1.name;
     this.activePlayer = 1;
-    this.winner = 0;
+    this.winner = '';
     this.moveCounter1 = 0;
     this.moveCounter2 = 0;
     this.winCount = 0;
@@ -55,9 +55,9 @@ class Game extends Component {
 
   dropCoinStart6() {
     this.dropCoin(6);
-  }
+  }  
 
-  dropCoin(col) {
+  dropCoin(col) {    
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].value == 0) {
         if (this.activePlayer === 1) {
@@ -68,14 +68,59 @@ class Game extends Component {
         }
         this.board[row][col].value = this.activePlayer;
         this.activePlayer = (this.activePlayer === 1) ? 2 : 1;
+        this.playerName = (this.activePlayer === 1) ? this.player1.name : this.player2.name;
         this.render();
         this.detectWin();
-        return true;
+        if(this.checkType() === 'Computer'){
+          if(this.winner){
+            return;
+          }
+          this.dropCoin(Math.floor(Math.random()*7));
+        }
+        return;
       }
     }
   }
 
+  dropCoin2(col) {
+    for (let row = 5; row >= 0; row--) {
+      if (this.board[row][col].value == 0) {
+        if (this.activePlayer === 1) {
+          this.moveCounter1++;
+        }
+        else if (this.activePlayer === 2) {
+          this.moveCounter2++;
+        }
+        this.board[row][col].value = this.activePlayer;
+        this.activePlayer = (this.activePlayer === 1) ? 2 : 1;
+        this.playerName = (this.activePlayer === 1) ? this.player1.name : this.player2.name;
+        this.render();
+        this.detectWin();
+        return;
+      }
+    }
+  }
 
+  checkIfTwoComp(){
+    if(this.player1.type === 'Computer' && this.player2.type === 'Computer'){
+      return true;
+    }
+  }
+
+  runTwoComp(){
+    while(!this.winner){
+      this.dropCoin2(Math.floor(Math.random()*7));
+    }         
+  }
+
+  checkType(){
+    if(this.activePlayer === 1) {
+      return this.player1.type;
+    }
+    if(this.activePlayer === 2) {
+      return this.player2.type;
+    }
+  }
 
   detectWin() {
     //horizontally
@@ -136,26 +181,30 @@ class Game extends Component {
   }
 
   gameOver(player) {
-    if (player === 1) {
-      this.winCount = this.moveCounter1;
-    }
-    if (player === 2) {
-      this.winCount = this.moveCounter2;
-    }
-    this.winner = player;
+    this.winCount = (player === 1) ? this.moveCounter1 : this.moveCounter2;    
+    this.winner = (player === 1) ? this.player1.name : this.player2.name;
     this.render();
-    $('.modal').modal('show');
-
+    setTimeout(function(){$('.modal').modal('show');}, 100);
+    
   }
 
   startGame() {
     this.gameBoard.renderBoard();
+    this.playerName = this.player1.name;
     this.activePlayer = 1;
-    this.winner = 0;
+    this.winner = '';
     this.moveCounter1 = 0;
     this.moveCounter2 = 0;
     this.winCount = 0;
     this.render();
+    if(this.checkIfTwoComp()){
+      this.runTwoComp();
+    }
+    else if(this.checkType() === 'Computer'){
+      this.dropCoin2(Math.floor(Math.random()*7));
+    }
+    
+      
   }
 
 

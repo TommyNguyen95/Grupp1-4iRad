@@ -1,7 +1,17 @@
-// Require the express module
+const flexjson = require ('jsonflex')({
+
+  jsonDir: '/www/json', // directory on server to save json to
+  scriptUrl: '/jsonflex.js', // url to load clientside script from
+  saveUrl: '/json-save', // url used by jsonflex to save json
+  loadUrlPrefix: '/json/' // prefix to add to clientside load url
+
+});
+
+// Require the express module   
 const express = require('express');
 // Create a new web server
 const app = express();
+app.use(flexjson);
 // Tell the web server to serve files
 // from the www folder
 app.use(express.static('www'));

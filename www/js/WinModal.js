@@ -1,0 +1,1 @@
+class WinModal extends Component {}
