@@ -1,8 +1,11 @@
 class Game extends Component {
 
-  constructor() {
+  constructor(playerArray) {
     super();
     this.gameBoard = new GameBoard();
+    this.playerArray = playerArray;
+
+    console.log(playerArray);
 
     this.addEvents({
       'click .col0': 'dropCoinStart0',
@@ -154,4 +157,6 @@ class Game extends Component {
     this.winCount = 0;
     this.render();
   }
+
+
 }
