@@ -1,7 +1,6 @@
-class HumanPlayer extends Player {
+class PlayersForm extends Component {
 
     constructor() {
-
         super();
     }
 }
