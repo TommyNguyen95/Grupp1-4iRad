@@ -5,4 +5,5 @@ class Player {
     this.type = 'Human';
     this.playerNumber = playerNumber;
   }
+  
 }
