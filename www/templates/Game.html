@@ -1,40 +1,36 @@
-<div>
+<div class="the-real-game">
 
-    <div class="current-player">
-      Current player: ${this.activePlayer}
-    </div>
-    <div class="modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Congrats player ${this.winner}, you win!</p>
-            <p>You did it in ${this.winCount} moves</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="restartButton btn btn-primary" data-dismiss="modal">Restart game</button>
-            <button type="button" class="link-button restartButton btn btn-secondary" href="/hiscore" data-dismiss="modal">Show
-              highscore list</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="container">
-      <div class="row">
-        <div class="col-3"></div>
-        <div class="dav-game-board col-6">
-  
-          ${this.gameBoard.board}
-  
-        </div>
-        <div class="col-3"></div>
-      </div>
-    </div>
-  
+  <div class="current-player">
+    Current player: ${this.playerName}
   </div>
+  <div class="modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Game Over</h5>          
+        </div>
+        <div class="modal-body">
+          <p>Congrats ${this.winner}, you win!</p>
+          <p>You did it in ${this.winCount} moves</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="restartButton btn btn-primary" data-dismiss="modal">Restart game</button>
+          <button type="button" class="link-button restartButton btn btn-secondary" href="/highScore" data-dismiss="modal">Show highscore list</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="dav-game-board col-6">
+
+        ${this.gameBoard.board}
+
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+
+</div>
