@@ -4,6 +4,4 @@ class StartPage extends Component {
     super();
     this.addRoute('/', 'Start');
   }
-
-
 }

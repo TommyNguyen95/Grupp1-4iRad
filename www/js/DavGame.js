@@ -1,3 +1,4 @@
+
 class DavGame extends Component {
 
   constructor() {
@@ -167,6 +168,7 @@ startGame(){
   this.winCount = 0;
   this.render();
 }
-
 } 
+
+
 
