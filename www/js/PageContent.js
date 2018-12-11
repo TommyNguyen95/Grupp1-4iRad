@@ -11,11 +11,11 @@ class PageContent extends Component {
   }
 
   async loadHighscoreData(){
-    JSON._classes(HiScorePage, List, Item);
+    JSON._classes(HighScorePage, List, Item);
     let response = await JSON._load('highscore.json');
     if(response === null){ return; }
-    response.data._id = this.hiscorePage._id;
-    this.hiscorePage.highscoreList = response.data.highscoreList;
-    this.hiscorePage.render();
+    response.data._id = this.highscorePage._id;
+    this.highscorePage.highscoreList = response.data.highscoreList;
+    this.highscorePage.render();
   }
 }

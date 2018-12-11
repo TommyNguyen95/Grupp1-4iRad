@@ -8,28 +8,33 @@ class List extends Component {
 
 
     addItem(name, score){
-        let lowestRank = this.items.length -1;
-        let lowestRankScore = this.items[lowestRank].score;
+        if(this.items.length <  10){
+            this.items.push(new Item(this, name, score));
+        }
+        else{
+            let lowestRank = this.items.length -1;
+            let lowestRankScore = this.items[lowestRank].score;
 
-        if (score <= lowestRankScore && this.items.length <= 10){
+            if (score <= lowestRankScore && this.items.length <= 10){
 
-            for(let i = 0; i <= this.items.length - 1; i++){
+                for(let i = 0; i <= this.items.length - 1; i++){
 
-                if(this.items[i].score > score){
+                    if(this.items[i].score > score){
 
-                    let newIndex = this.items.indexOf(this.items[i])
-                    i = this.items.length;
+                        let newIndex = this.items.indexOf(this.items[i])
+                        i = this.items.length;
 
-                    this.items.splice(newIndex, 0, new Item(this, name, score));
+                        this.items.splice(newIndex, 0, new Item(this, name, score));
+                    }
                 }
+
             }
 
-        }
+            if(this.items.length > 10){
+            
+                this.removeItem(lowestRank);
 
-        if(this.items.length > 10){
-        
-            this.removeItem(lowestRank);
-
+            }
         }
   
     }
@@ -39,4 +44,4 @@ class List extends Component {
         this.page.update();
     }
     
-  }
+}
