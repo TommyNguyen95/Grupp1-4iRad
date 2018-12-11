@@ -11,28 +11,25 @@ class List extends Component {
         let lowestRank = this.items.length -1;
         let lowestRankScore = this.items[lowestRank].score;
 
-        if(this.items.length > 9){
-        
-            this.removeItem(lowestRank);
-
-        }
-
-        if (score <= lowestRankScore && this.items.length <= 9){
+        if (score <= lowestRankScore && this.items.length <= 10){
 
             for(let i = 0; i <= this.items.length - 1; i++){
 
                 if(this.items[i].score > score){
 
                     let newIndex = this.items.indexOf(this.items[i])
-                    i = this.items.length;                 
-                    this.items.splice(newIndex, 0, new Item(this, name, score));
+                    i = this.items.length;
 
+                    this.items.splice(newIndex, 0, new Item(this, name, score));
                 }
             }
 
         }
-        if(score >= lowestRankScore && this.items.length <= 9){
-            this.items.push(new Item(this, name, score));
+
+        if(this.items.length > 10){
+        
+            this.removeItem(lowestRank);
+
         }
   
     }
