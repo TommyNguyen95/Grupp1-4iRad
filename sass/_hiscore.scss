@@ -1,18 +1,19 @@
-.rank{
-  display:inline-block;
-}
+.hiscorepage{
 
-.rank p{
-  margin:0;
-}
+    h1{
+        text-align: center;
+        color:red;
+    }
 
-.score{
-  display:inline-block;
-}
-.name{
-  display:inline-block;
-}
+    .rank{
+        display:inline-block;
+    }
 
-h4{
-  display: inline-block;
+    .rank p{
+        margin:0;
+    }
+
+    .score, .name, h4{
+        display:inline-block;
+    }
 }
