@@ -1,21 +1,18 @@
 // Require the express module
 const express = require('express');
+// Require jsonflex
+const jsonflex = require('jsonflex')();
 // Create a new web server
 const app = express();
 // Tell the web server to serve files
-// from the www folder
+// from the www folder and serve the jsonflex script
+app.use(jsonflex);
 app.use(express.static('www'));
 // Start the web server on port 3000
 app.listen(3000,() => console.log('Listening on port 3000'));
 
 const fs = require('fs');
 const path = require('path');
-
-const Sass = require('./sass');
-const config = require('./config.json');
-for(let conf of config.sass){
-    new Sass(conf);
-}
 
 // Automatically load all scripts at root level of js folder
 // and load their corresponding template files
@@ -41,10 +38,7 @@ app.get('/template-to-js/:template', (req, res) => {
 
 // Serve the index page everywhere so that the
 // frontend router can decide what to do
-app.get('*', (req, res) => {
+app.use((req, res, next) => {
+  if(req.url === '/jsonflex.js' || req.url == '/json-save'){ next(); return; }
   res.sendFile(path.join(__dirname, '/www/index.html'));
 });
-
-
-
- 
