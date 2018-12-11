@@ -7,6 +7,5 @@ class Item extends Component {
         this.name = name;
         this.score = score;
         
-        }
-
-  }
+    }
+}

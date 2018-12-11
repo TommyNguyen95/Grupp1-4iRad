@@ -19,13 +19,12 @@ class HiScorePage extends Component {
     addItemOnEnter(e){
         if(e.which === 13){
             this.addItem();
+        }
+
     }
 
-}
-
-update(){
-  this.render();
-  // optional to save all data to json
-  JSON._save('highscore', {data: this});
-}
+    update(){
+        this.render();
+        JSON._save('highscore', {data: this});
+    }
 }
