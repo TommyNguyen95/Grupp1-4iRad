@@ -14,6 +14,12 @@ app.listen(3000,() => console.log('Listening on port 3000'));
 const fs = require('fs');
 const path = require('path');
 
+const Sass = require('./sass');
+const config = require('./config.json');
+for(let conf of config.sass){
+    new Sass(conf);
+}
+
 // Automatically load all scripts at root level of js folder
 // and load their corresponding template files
 app.get('/autoload-js-and-templates', (req, res) => {

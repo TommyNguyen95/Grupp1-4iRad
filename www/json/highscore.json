@@ -21,7 +21,7 @@
             "↻": "$.data.highscoreList"
           },
           "name": "Player name",
-          "score": 1,
+          "score": 100,
           "⚙": "Item"
         },
         {
@@ -30,7 +30,7 @@
             "↻": "$.data.highscoreList"
           },
           "name": "Player name",
-          "score": 11,
+          "score": 100,
           "⚙": "Item"
         },
         {
@@ -39,7 +39,7 @@
             "↻": "$.data.highscoreList"
           },
           "name": "Player name",
-          "score": 11,
+          "score": 100,
           "⚙": "Item"
         },
         {
@@ -48,7 +48,7 @@
             "↻": "$.data.highscoreList"
           },
           "name": "Player name",
-          "score": 11,
+          "score": 100,
           "⚙": "Item"
         },
         {
@@ -57,7 +57,7 @@
             "↻": "$.data.highscoreList"
           },
           "name": "Player name",
-          "score": 11,
+          "score": 100,
           "⚙": "Item"
         },
         {
@@ -66,43 +66,43 @@
             "↻": "$.data.highscoreList"
           },
           "name": "Player name",
-          "score": 11,
+          "score": 100,
           "⚙": "Item"
         },
         {
-          "_id": 69,
+          "_id": 78,
           "list": {
             "↻": "$.data.highscoreList"
           },
           "name": "Player name",
-          "score": 12,
+          "score": 100,
           "⚙": "Item"
         },
         {
-          "_id": 70,
+          "_id": 78,
           "list": {
             "↻": "$.data.highscoreList"
           },
           "name": "Player name",
-          "score": 12,
+          "score": 100,
           "⚙": "Item"
         },
         {
-          "_id": 71,
+          "_id": 78,
           "list": {
             "↻": "$.data.highscoreList"
           },
           "name": "Player name",
-          "score": 12,
+          "score": 100,
           "⚙": "Item"
         },
         {
-          "_id": 72,
+          "_id": 79,
           "list": {
             "↻": "$.data.highscoreList"
           },
           "name": "Player name",
-          "score": 12,
+          "score": 100,
           "⚙": "Item"
         }
       ],

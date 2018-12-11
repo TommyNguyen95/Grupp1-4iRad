@@ -3,10 +3,6 @@ class HiScorePage extends Component {
     constructor(){
         super();
         this.addRoute('/hiscore', 'hiscore');
-        this.addEvents({
-            'click .add-btn': 'addItem',
-            'keyup .to-add': 'addItemOnEnter'
-        });
         
         this.highscoreList = new List(this);
 
@@ -14,7 +10,7 @@ class HiScorePage extends Component {
 
     addItem(){
         let playerName = 'Player name';
-        let playerScore = 11;
+        let playerScore = 'Player Score';
         this.highscoreList.addItem(playerName, playerScore);
         this.update();
     }

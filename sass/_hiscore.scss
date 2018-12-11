@@ -1,19 +1,32 @@
 .hiscorepage{
 
+    text-align: center;
+
+
     h1{
         text-align: center;
-        color:red;
     }
+
 
     .rank{
-        display:inline-block;
+        padding:0;
+        p{
+            margin:10px;
+            margin-right: 0;
+            margin-left: 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid grey;
+        }
     }
 
-    .rank p{
-        margin:0;
+    .player{
+        margin-left: 0;
     }
-
-    .score, .name, h4{
-        display:inline-block;
+    .name, .score{
+        margin-top:10px;
+        margin-left: 0;
+        padding-bottom:5px;
+        border-bottom: 1px solid grey;
     }
+    
 }
