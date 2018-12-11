@@ -1,13 +1,13 @@
 class NavBar extends Component {
 
-  constructor(){
+  constructor() {
     super();
     this.navItems = [
       new NavItem('Start', '/'),
       new NavItem('Play', '/play'),
       new NavItem('Game Rules', '/game-rules'),
-      new NavItem('Hiscore', '/hiscore')
+      new NavItem('Highscore', '/highScore'),
+    
     ];
   }
-
 }

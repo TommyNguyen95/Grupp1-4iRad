@@ -1,6 +1,6 @@
 class App extends Component {
-
-  constructor(){
+  
+  constructor() {
     super();
     this.navBar = new NavBar();
     this.pageContent = new PageContent();
@@ -9,5 +9,4 @@ class App extends Component {
     new Router(this.pageContent);
     $('body').html(this.render());
   }
-
 }
