@@ -9,8 +9,7 @@
 }
 
 main {
-    background-image: url(/images/snowmanbg.jpg);
-    background-repeat: no-repeat;
+    background-image: url(/images/snowflakebg.jpg);
     background-size:cover;
    
     
@@ -48,11 +47,8 @@ main {
         }
     }
     .start-welcome{
-        text-align: center;        
-        background-image:url(/images/snowflakebg.jpg);
-        background-size: 100% 100%;
-        padding-top:30px;
-        
+        text-align: center;
+        padding-top:30px;        
     }
     .filler{
         visibility: hidden;
