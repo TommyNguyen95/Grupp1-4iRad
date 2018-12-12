@@ -4,6 +4,8 @@ class Slot extends Component {
     super();
     this.value = 0;
     this.col = 'col' + col;
+    this.animate= 0;
     this.gameBoard=gameBoard;
+    this.miniBounce=0;
   }
 }
