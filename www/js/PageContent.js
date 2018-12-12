@@ -1,10 +1,21 @@
 class PageContent extends Component {
 
-  constructor(){
+  constructor() {
     super();
     this.startPage = new StartPage();
+    this.gamestartPage = new GameStartPage();
     this.missingPage = new MissingPage();
-    this.gamePage = new GamePage();
+    this.gameBoard = new GameBoard();
+    this.highscorePage = new HighScorePage();
+    this.loadHighscoreData();
   }
-  
+
+  async loadHighscoreData(){
+    JSON._classes(HighScorePage, List, Item);
+    let response = await JSON._load('highscore.json');
+    if(response === null){ return; }
+    response.data._id = this.highscorePage._id;
+    this.highscorePage.highscoreList = response.data.highscoreList;
+    this.highscorePage.render();
+  }
 }
