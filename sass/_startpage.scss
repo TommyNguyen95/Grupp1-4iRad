@@ -1,15 +1,68 @@
-.start-link{
-    padding:5px;
-    border:1px solid black;
-    border-radius:5px;
+@font-face {
+    font-family: snowyText;
+    src: url(/fonts/DSSnowfall.ttf);
 }
 
-.start-welcome{
-    border:1px solid black;
-    height:200px;
+@font-face {
+    font-family: chrissyText;
+    src: url(/fonts/decor.ttf);
 }
 
-.start-gamelinks{
-    border:1px solid black;
-    padding:5px;
+main {
+    background-image: url(/images/snowflakebg.jpg);
+    background-size:cover;
+   
+    
 }
+
+
+.start-section {
+    h1 {
+    font-family: snowyText;
+    color: red;
+    font-size: 6vw;
+    }
+
+    h2 {
+    font-size:3vw;
+    font-family: snowyText;
+    color:green;
+    }
+    .start-gamelinks{
+    
+        padding:5px;
+        font-size:2vw;
+        text-align: center;
+        margin-bottom:10px;
+        .start-link{
+            padding:5px;        
+            display:block;
+            font-family:snowyText;
+            color:green;
+        }
+        h5 {
+            font-family:snowyText;
+            color:red;
+            font-size:3vw;
+        }
+    }
+    .start-welcome{
+        text-align: center;
+        padding-top:30px;        
+    }
+    .filler{
+        visibility: hidden;
+        font-size:2.4vw;
+    }
+    .start-play-btn{
+        font-family: snowyText;
+    }
+    
+     
+}
+
+
+
+
+
+

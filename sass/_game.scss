@@ -1,3 +1,7 @@
+@font-face {
+  font-family: snowtext;
+  src: url(/fonts/DSSnowfall.ttf);
+}
 .dav-game-board{
   
     background-color: rgb(155, 49, 49);
@@ -38,9 +42,11 @@
 }
 
 .current-player {
-  font-size:1vw;
+  font-size: 1.5vw;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  font-family: snowtext;
+  color: red;
 }
 
 

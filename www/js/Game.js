@@ -150,6 +150,9 @@ class Game extends Component {
           }
           this.fall(Math.floor(Math.random()*7));
         }
+        if(this.moveCounter1 + this.moveCounter2 === 42 && !this.winner){
+          $('.draw-modal').modal('show');
+        }
         return;
       }
     }
@@ -187,8 +190,8 @@ class Game extends Component {
 
   async runTwoComp(){
     while(!this.winner){
-      await this.sleep(1000)
       this.fall2(Math.floor(Math.random()*7));
+      await this.sleep(1000);
     }         
   }
 
@@ -263,7 +266,7 @@ class Game extends Component {
     this.winCount = (player === 1) ? this.moveCounter1 : this.moveCounter2;    
     this.winner = (player === 1) ? this.player1.name : this.player2.name;
     this.render();
-    setTimeout(function(){$('.modal').modal('show');}, 100);
+    setTimeout(function(){$('.win-modal').modal('show');}, 100);
     
   }
 
@@ -277,7 +280,7 @@ class Game extends Component {
     this.winCount = 0;
     this.render();
     if(this.checkIfTwoComp()){
-      this.runTwoComp();2
+      this.runTwoComp();
     }
     else if(this.checkType() === 'Computer'){
       this.fall2(Math.floor(Math.random()*7));
