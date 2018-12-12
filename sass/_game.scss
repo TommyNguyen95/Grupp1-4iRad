@@ -1,33 +1,68 @@
 .dav-game-board{
-    background-color: blue;
+  
+    background-color: rgb(155, 49, 49);
     padding:5px;
-    border:30px rgb(15, 15, 184);
-    border-style:ridge;
+    border:10px green;
+    border-style: ridge;
   }
+
+@keyframes miniBounce {
+  0%{ -webkit-transform:translateY(0px) rotate(-45deg);}
+  30%{ -webkit-transform:translateY(-20px) rotate(-45deg);}
+  60%{ -webkit-transform:translateY(0px) rotate(-45deg);}
+  70%{ -webkit-transform:translateY(-5px) rotate(-45deg);}
+  100%{ -webkit-transform:translateY(0) rotate(-45deg);}
+}
+
+
+.slots{
+  width: calc(100% / 7);
+  padding-top: calc(100% / 7);  
+  border: 1px solid black;
+  background-color:white;
+  border-radius: 50%;
+  cursor:pointer;
+  display:inline-block;
   
-  .slots{
-    width: calc(100% / 7);
-    padding-top: calc(100% / 7);  
-    border: 1px solid black;
-    background-color:white;
-    border-radius: 50%;
-    cursor:pointer;
-    display:inline-block;
-    
-  }
+}
+
+.player1 {
+  background-image:url('/images/redToken.png');
+  background-size: cover;
   
-  .player1 {
-    background-image:url('/images/redToken.png');
-    background-size: cover;
-    
-  }
-  
-  .player2 {
-    background-image:url('/images/yellowToken.png');
-    background-size: cover; 
-  }
-  
-  .current-player {
-    font-size:2vw;
-  }
-  
+}
+
+.player2 {
+  background-image:url('/images/yellowToken.png');
+  background-size: cover; 
+}
+
+.current-player {
+  font-size:1vw;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+
+.animate1{
+  background-image:url('/images/redToken.png');
+  background-size: cover; 
+ 
+ 
+}
+
+
+
+.animate2{
+  background-image:url('/images/yellowToken.png');
+  background-size: cover; 
+
+ 
+}
+
+.mini-bounce1{
+  animation: miniBounce 0.4s ease-in-out;
+}
+
+
