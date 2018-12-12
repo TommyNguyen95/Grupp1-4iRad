@@ -2,7 +2,7 @@ class HighScorePage extends Component {
 
   constructor(){
     super();
-    this.addRoute('/highScore', 'High score');
+    this.addRoute('/highScore', 'Highscore');
     
     this.highscoreList = new List(this);
 
