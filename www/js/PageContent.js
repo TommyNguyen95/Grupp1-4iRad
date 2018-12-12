@@ -7,6 +7,15 @@ class PageContent extends Component {
     this.missingPage = new MissingPage();
     this.gameBoard = new GameBoard();
     this.highscorePage = new HighScorePage();
+    this.loadHighscoreData();
   }
 
+  async loadHighscoreData(){
+    JSON._classes(HighScorePage, List, Item);
+    let response = await JSON._load('highscore.json');
+    if(response === null){ return; }
+    response.data._id = this.highscorePage._id;
+    this.highscorePage.highscoreList = response.data.highscoreList;
+    this.highscorePage.render();
+  }
 }
