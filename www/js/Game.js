@@ -138,7 +138,8 @@ class Game extends Component {
           this.moveCounter2++;
         }
         this.board[row][col].value = this.activePlayer;
-        this.activePlayer = (this.activePlayer === 1) ? 2 : 1;  
+        this.activePlayer = (this.activePlayer === 1) ? 2 : 1;
+        this.playerName = (this.activePlayer === 1) ? this.player1.name : this.player2.name;
         this.render();
         this.board[row][col].miniBounce -=1
         this.detectWin();
