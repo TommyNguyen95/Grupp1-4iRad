@@ -1,0 +1,26 @@
+// .type-name{
+//     border-width: 9px;
+//     border-image: repeating-linear-gradient(30deg, red, green, red 12px) 10;
+// }
+.players-form{
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ccc;
+}
+
+.type-wrapper:focus{
+ box-shadow: none;
+    border-color: #ccc;
+}
+
+.players{
+    font-family: snowyText;
+    color: red;
+}
+
+.btn-style-form{
+    font-family: snowyText;
+    font-size: 19px;
+}
+}
