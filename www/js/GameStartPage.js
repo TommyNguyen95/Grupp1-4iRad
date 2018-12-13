@@ -29,13 +29,9 @@ class GameStartPage extends Component {
   
       let p2name = this.baseEl.find('#name2').val();
       let p2nameIsValid = this.inputValidation(p2name);
-  
       if (p1nameIsValid && p2nameIsValid) {
-  
         this.player1 = (this.baseEl.find('#type1').val() === 'Human') ? (new Player(this.baseEl.find('#name1').val(), 1)) : (new Bot(1));
         this.player2 = (this.baseEl.find('#type2').val() === 'Human') ? (new Player(this.baseEl.find('#name2').val(), 2)) : (new Bot(2)); 
-        
-  
         this.createNewGame(this.player1, this.player2);
       } else {
         alert('Names must be 2 to 10 letters.');
@@ -64,9 +60,6 @@ class GameStartPage extends Component {
           // it moves on to the if statement on line 51
         }
       }
-      
-      console.log('nrofisgns', nrOfSigns);
-  
       if (nrOfSigns < 2 || nrOfSigns > 10) {
         console.log('hello type again');
         return false;

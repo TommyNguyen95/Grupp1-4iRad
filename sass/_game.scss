@@ -2,8 +2,8 @@
   font-family: snowtext;
   src: url(/fonts/DSSnowfall.ttf);
 }
+
 .dav-game-board{
-  
     background-color: rgb(155, 49, 49);
     padding:5px;
     border:10px green;
@@ -18,7 +18,6 @@
   100%{ -webkit-transform:translateY(0)rotate(-45deg) ;}
 }
 
-
 .slots{
   width: calc(100% / 7);
   padding-top: calc(100% / 7);  
@@ -27,13 +26,11 @@
   border-radius: 50%;
   cursor:pointer;
   display:inline-block;
-  
 }
 
 .player1 {
   background-image:url('/images/redToken.png');
   background-size: cover;
-  
 }
 
 .player2 {
@@ -49,22 +46,14 @@
   color: red;
 }
 
-
-
 .animate1{
   background-image:url('/images/redToken.png');
   background-size: cover; 
- 
- 
 }
-
-
 
 .animate2{
   background-image:url('/images/yellowToken.png');
   background-size: cover; 
-
- 
 }
 
 .mini-bounce1{
