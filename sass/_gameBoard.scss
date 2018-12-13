@@ -1,7 +1,5 @@
 .game-board{ 
-  
   display: flex;
-  
 }
 
 .game-window{
@@ -11,23 +9,18 @@
 }
 
 .empty-slot{
-
-
   padding-top: calc(100%);
   border: 1px solid black;
   background-color:white;
   border-radius: 50%;
   cursor:pointer;
-
 }
 
 .slot{
   padding:0;
 }
 
-
 .empty-column{
- 
   -webkit-flex-direction: column; 
   flex-direction: column; 
   float: left;

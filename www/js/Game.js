@@ -24,57 +24,114 @@ class Game extends Component {
     this.moveCounter2 = 0;
     this.winCount = 0;
     this.board = this.gameBoard.board;
+    this.animateCounter1 = 1
+    this.sleep = function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
 
     this.startGame();
   }
 
   dropCoinStart0() {
-    this.dropCoin(0);
+    this.fall(0);
   }
 
   dropCoinStart1() {
-    this.dropCoin(1);
+    this.fall(1);
   }
 
   dropCoinStart2() {
-    this.dropCoin(2);
+    this.fall(2);
   }
 
   dropCoinStart3() {
-    this.dropCoin(3);
+    this.fall(3);
   }
 
   dropCoinStart4() {
-    this.dropCoin(4);
+    this.fall(4);
   }
 
   dropCoinStart5() {
-    this.dropCoin(5);
+    this.fall(5);
   }
 
   dropCoinStart6() {
-    this.dropCoin(6);
-  }  
+    this.fall(6);
+  }
 
-  dropCoin(col) {    
+  async fall(col) {
+    for (let row = 0; row < 6; row++) {
+      if (this.board[row][col].value == 0) {
+        if (this.activePlayer === 1) {
+          await this.sleep(45)
+          this.board[row][col].animate += 1;
+          this.render();
+          this.board[row][col].animate -= 1;
+        } else if (this.activePlayer === 2) {
+          await this.sleep(45)
+          this.board[row][col].animate += 2;
+          this.render();
+          this.board[row][col].animate -= 2;
+        }
+
+
+      }
+
+    }
+    this.dropCoin(col);
+  }
+
+  async fall2(col) {
+    for (let row = 0; row < 6; row++) {
+      if (this.board[row][col].value == 0) {
+        if (this.activePlayer === 1) {
+          await this.sleep(45)
+          this.board[row][col].animate += 1;
+          this.render();
+          this.board[row][col].animate -= 1;
+        } else if (this.activePlayer === 2) {
+          await this.sleep(45)
+          this.board[row][col].animate += 2;
+          this.render();
+          this.board[row][col].animate -= 2;
+        }
+
+
+      }
+
+    }
+
+    this.dropCoin2(col);
+  }
+
+  dropCoin(col) {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].value == 0) {
         if (this.activePlayer === 1) {
+          this.render();
+          this.board[row][col].miniBounce += 1
           this.moveCounter1++;
         }
         else if (this.activePlayer === 2) {
+          this.board[row][col].miniBounce += 1
           this.moveCounter2++;
         }
         this.board[row][col].value = this.activePlayer;
         this.activePlayer = (this.activePlayer === 1) ? 2 : 1;
         this.playerName = (this.activePlayer === 1) ? this.player1.name : this.player2.name;
         this.render();
+        this.board[row][col].miniBounce -= 1
         this.detectWin();
-        if(this.checkType() === 'Computer'){
-          if(this.winner){
+
+        if (this.checkType() === 'Computer') {
+          if (this.winner) {
             return;
           }
-          this.dropCoin(Math.floor(Math.random()*7));
+          this.fall(Math.floor(Math.random() * 7));
+        }
+        if (this.moveCounter1 + this.moveCounter2 === 42 && !this.winner) {
+          $('.draw-modal').modal('show');
         }
         return;
       }
@@ -85,38 +142,42 @@ class Game extends Component {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].value == 0) {
         if (this.activePlayer === 1) {
+          this.board[row][col].miniBounce += 1
           this.moveCounter1++;
         }
         else if (this.activePlayer === 2) {
+          this.board[row][col].miniBounce += 1
           this.moveCounter2++;
         }
         this.board[row][col].value = this.activePlayer;
         this.activePlayer = (this.activePlayer === 1) ? 2 : 1;
         this.playerName = (this.activePlayer === 1) ? this.player1.name : this.player2.name;
         this.render();
+        this.board[row][col].miniBounce -= 1
         this.detectWin();
         return;
       }
     }
   }
 
-  checkIfTwoComp(){
-    if(this.player1.type === 'Computer' && this.player2.type === 'Computer'){
+  checkIfTwoComp() {
+    if (this.player1.type === 'Computer' && this.player2.type === 'Computer') {
       return true;
     }
   }
 
-  runTwoComp(){
-    while(!this.winner){
-      this.dropCoin2(Math.floor(Math.random()*7));
-    }         
+  async runTwoComp() {
+    while (!this.winner) {
+      this.fall2(Math.floor(Math.random() * 7));
+      await this.sleep(1000);
+    }
   }
 
-  checkType(){
-    if(this.activePlayer === 1) {
+  checkType() {
+    if (this.activePlayer === 1) {
       return this.player1.type;
     }
-    if(this.activePlayer === 2) {
+    if (this.activePlayer === 2) {
       return this.player2.type;
     }
   }
@@ -180,11 +241,10 @@ class Game extends Component {
   }
 
   gameOver(player) {
-    this.winCount = (player === 1) ? this.moveCounter1 : this.moveCounter2;    
+    this.winCount = (player === 1) ? this.moveCounter1 : this.moveCounter2;
     this.winner = (player === 1) ? this.player1.name : this.player2.name;
     this.render();
-    setTimeout(function(){$('.modal').modal('show');}, 100);
-    
+    setTimeout(function () { $('.win-modal').modal('show'); }, 100);
   }
 
   startGame() {
@@ -196,13 +256,11 @@ class Game extends Component {
     this.moveCounter2 = 0;
     this.winCount = 0;
     this.render();
-    if(this.checkIfTwoComp()){
+    if (this.checkIfTwoComp()) {
       this.runTwoComp();
     }
-    else if(this.checkType() === 'Computer'){
-      this.dropCoin2(Math.floor(Math.random()*7));
+    else if (this.checkType() === 'Computer') {
+      this.fall2(Math.floor(Math.random() * 7));
     }
-    
-      
   }
 }

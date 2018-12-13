@@ -1,0 +1,113 @@
+{
+  "data": {
+    "_id": 53,
+    "route": "/highScore",
+    "title": "High score",
+    "highscoreList": {
+      "_id": 65,
+      "page": {
+        "_id": 66,
+        "route": "/highScore",
+        "title": "High Score",
+        "highscoreList": {
+          "↻": "$.data.highscoreList"
+        },
+        "⚙": "HighScorePage"
+      },
+      "items": [
+        {
+          "_id": 61,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Player name",
+          "score": 100,
+          "⚙": "Item"
+        },
+        {
+          "_id": 62,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Player name",
+          "score": 100,
+          "⚙": "Item"
+        },
+        {
+          "_id": 63,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Player name",
+          "score": 100,
+          "⚙": "Item"
+        },
+        {
+          "_id": 64,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Player name",
+          "score": 100,
+          "⚙": "Item"
+        },
+        {
+          "_id": 65,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Player name",
+          "score": 100,
+          "⚙": "Item"
+        },
+        {
+          "_id": 66,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Player name",
+          "score": 100,
+          "⚙": "Item"
+        },
+        {
+          "_id": 67,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Player name",
+          "score": 100,
+          "⚙": "Item"
+        },
+        {
+          "_id": 68,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Player name",
+          "score": 100,
+          "⚙": "Item"
+        },
+        {
+          "_id": 69,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Player name",
+          "score": 100,
+          "⚙": "Item"
+        },
+        {
+          "_id": 70,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Player name",
+          "score": 100,
+          "⚙": "Item"
+        }
+      ],
+      "⚙": "List"
+    },
+    "⚙": "HighScorePage"
+  }
+}

@@ -1,61 +1,28 @@
-.container-hiscore {
-    font-size: 1.2em;
-  }
-  
-  .hiscore-title h2{
-    color: rgb(114, 255, 240);
-    margin-top: 30px;
-  }
-  
-  .table th, .table td {
+.hiscorepage{
+  text-align: center;
+  h1{
     text-align: center;
   }
-  
-  .table th {
-    padding: 20px 0;
-  }
-  
-  .table td {
-    padding: 8px 0 25px 0;
-  }
-  
-  th p {
-    color: rgb(134, 230, 220);
-  }
-  
-  .rank, .player-points {
-    width: 25%;
-  }
-  
-  .table {
-    border: outset 2px rgb(114, 255, 240);
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .container-hiscore {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    @media only screen and (max-width: 576px) {
-      .container-hiscore {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-      @media only screen and (max-width: 420px) {
-        th p {
-          margin-left: 10px;
-        }
-        .hiscore-title {
-          margin-top: 20px;
-        }
-      } 
+  .rank {
+    padding:0;
+    p {
+      margin:10px;
+      margin-right: 0;
+      margin-left: 0;
+      padding-bottom: 5px;
+      border-bottom: 1px solid grey;
     }
   }
-  
-  @media only screen and (min-width: 1200px){
-    .container-hiscore {
-      padding: 0 150px 50px 150px;
-    }
+
+  .player{
+    margin-left: 0;
   }
-  
-  
+
+  .name, .score{
+  margin-top:10px;
+  margin-left: 0;
+  padding-bottom:5px;
+  border-bottom: 1px solid grey;
+  }
+
+}
