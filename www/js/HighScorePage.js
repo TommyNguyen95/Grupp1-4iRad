@@ -13,14 +13,14 @@ class HighScorePage extends Component {
     this.update();
   }
 
-  addItemOnEnter(e) {
-    if (e.which === 13) {
-      this.addItem();
+    addHiScore(playerName, playerScore){
+        this.highscoreList.addHiscore(playerName, playerScore);
+        this.update();
     }
-  }
 
-  update() {
-    this.render();
-    JSON._save('highscore', { data: this });
-  }
+
+    update(){
+        this.render();
+        JSON._save('highscore', {data: this});
+    }
 }
