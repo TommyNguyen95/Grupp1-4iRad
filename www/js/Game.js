@@ -263,6 +263,7 @@ class Game extends Component {
     this.winCount = (player === 1) ? this.moveCounter1 : this.moveCounter2;    
     this.winner = (player === 1) ? this.player1.name : this.player2.name;
     this.render();
+    App.highscorePage.addHiScore(this.winner, this.winCount);
     setTimeout(function(){$('.modal').modal('show');}, 100);
     
   }

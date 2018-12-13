@@ -16,6 +16,24 @@
       },
       "items": [
         {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "kim",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Britt-marie",
+          "score": 6,
+          "⚙": "Item"
+        },
+        {
           "_id": 61,
           "list": {
             "↻": "$.data.highscoreList"
@@ -80,24 +98,6 @@
         },
         {
           "_id": 68,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 69,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 70,
           "list": {
             "↻": "$.data.highscoreList"
           },
