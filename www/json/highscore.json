@@ -2,7 +2,7 @@
   "data": {
     "_id": 53,
     "route": "/highScore",
-    "title": "High score",
+    "title": "Highscore",
     "highscoreList": {
       "_id": 65,
       "page": {
@@ -16,88 +16,88 @@
       },
       "items": [
         {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "kim",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "gunnar",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Tommy",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Orten",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "greger",
+          "score": 5,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "greger",
+          "score": 5,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Britt-marie",
+          "score": 6,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "greger",
+          "score": 6,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "bert",
+          "score": 8,
+          "⚙": "Item"
+        },
+        {
           "_id": 61,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 62,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 63,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 64,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 65,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 66,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 67,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 68,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 69,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 70,
           "list": {
             "↻": "$.data.highscoreList"
           },

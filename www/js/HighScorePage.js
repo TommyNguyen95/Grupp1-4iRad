@@ -1,27 +1,23 @@
 class HighScorePage extends Component {
 
-  constructor(){
+  constructor() {
     super();
     this.addRoute('/highScore', 'Highscore');
-    
     this.highscoreList = new List(this);
+  }
 
-    }
+  addItem() {
+    let playerName = 'Player name';
+    let playerScore = 'Player score';
+    this.highscoreList.addItem(playerName, playerScore);
+    this.update();
+  }
 
-    addItem(){
-        let playerName = 'Player name';
-        let playerScore = 'Player score';
-        this.highscoreList.addItem(playerName, playerScore);
+    addHiScore(playerName, playerScore){
+        this.highscoreList.addHiscore(playerName, playerScore);
         this.update();
     }
 
-
-    addItemOnEnter(e){
-        if(e.which === 13){
-            this.addItem();
-        }
-
-    }
 
     update(){
         this.render();

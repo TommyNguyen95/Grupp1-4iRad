@@ -7,7 +7,7 @@ class List extends Component {
     }
 
 
-    addItem(name, score){
+    addHiscore(name, score){
         if(this.items.length <  10){
             this.items.push(new Item(this, name, score));
         }
@@ -32,14 +32,14 @@ class List extends Component {
 
             if(this.items.length > 10){
             
-                this.removeItem(lowestRank);
+                this.removeHiscore(lowestRank);
 
             }
         }
   
     }
   
-    removeItem(item){
+    removeHiscore(item){
         this.items.splice(this.items.indexOf(item), 1);
         this.page.update();
     }
