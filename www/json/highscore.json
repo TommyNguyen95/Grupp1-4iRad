@@ -43,6 +43,15 @@
           "⚙": "Item"
         },
         {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "bert",
+          "score": 8,
+          "⚙": "Item"
+        },
+        {
           "_id": 61,
           "list": {
             "↻": "$.data.highscoreList"
@@ -89,15 +98,6 @@
         },
         {
           "_id": 66,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 67,
           "list": {
             "↻": "$.data.highscoreList"
           },
