@@ -61,10 +61,8 @@ class GameStartPage extends Component {
         }
       }
       if (nrOfSigns < 2 || nrOfSigns > 10) {
-        console.log('hello type again');
         return false;
       } else {
-        console.log('im an else');
         return true;
       }
     }
