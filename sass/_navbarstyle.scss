@@ -1,0 +1,30 @@
+nav{
+  div{
+    li{
+      width: 18vw;
+      margin: 10px 0 0 50px;
+     
+      a{
+        color: black;
+        font-size: 14px;
+        text-align: center;
+    
+      }
+    }
+  }
+}
+
+
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active{
+background-color:rgba(172, 210, 229,0.6);
+}
+
+
+
+@media screen and (max-width: 992px) {
+  li.nav-item{
+   
+    margin:  0 auto;
+  }
+}
