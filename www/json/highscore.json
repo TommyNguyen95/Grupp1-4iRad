@@ -92,17 +92,17 @@
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "bert",
-          "score": 8,
+          "name": "Glen",
+          "score": 7,
           "⚙": "Item"
         },
         {
-          "_id": 61,
+          "_id": 156,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "Player name",
-          "score": 100,
+          "name": "bert",
+          "score": 8,
           "⚙": "Item"
         }
       ],
