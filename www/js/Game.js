@@ -24,6 +24,7 @@ class Game extends Component {
     this.moveCounter2 = 0;
     this.winCount = 0;
     this.board = this.gameBoard.board;
+    this.doIgnore = false;
     this.animateCounter1 = 1
     this.sleep = function sleep(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
@@ -61,6 +62,9 @@ class Game extends Component {
   }
 
   async fall(col) {
+    if(this.doIgnore){
+      return;
+    }    
     for (let row = 0; row < 6; row++) {
       if (this.board[row][col].value == 0) {
         if (this.activePlayer === 1) {
@@ -251,6 +255,7 @@ class Game extends Component {
 
   startGame() {
     this.gameBoard.renderBoard();
+    this.doIgnore = false;
     this.playerName = this.player1.name;
     this.activePlayer = 1;
     this.winner = '';
@@ -259,6 +264,7 @@ class Game extends Component {
     this.winCount = 0;
     this.render();
     if (this.checkIfTwoComp()) {
+      this.doIgnore = true;
       this.runTwoComp();
     }
     else if (this.checkType() === 'Computer') {

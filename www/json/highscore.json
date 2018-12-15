@@ -38,6 +38,24 @@
           "list": {
             "↻": "$.data.highscoreList"
           },
+          "name": "Tommy",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Orten",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
           "name": "greger",
           "score": 5,
           "⚙": "Item"
@@ -74,35 +92,17 @@
           "list": {
             "↻": "$.data.highscoreList"
           },
+          "name": "Glen",
+          "score": 7,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
           "name": "bert",
           "score": 8,
-          "⚙": "Item"
-        },
-        {
-          "_id": 61,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 62,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
-          "⚙": "Item"
-        },
-        {
-          "_id": 63,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Player name",
-          "score": 100,
           "⚙": "Item"
         }
       ],
