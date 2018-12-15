@@ -19,7 +19,7 @@ class List extends Component {
 
                 for(let i = 0; i <= this.items.length - 1; i++){
 
-                    if(this.items[i].score > score){
+                    if(this.items[i].score >= score){
 
                         let newIndex = this.items.indexOf(this.items[i])
                         i = this.items.length;
