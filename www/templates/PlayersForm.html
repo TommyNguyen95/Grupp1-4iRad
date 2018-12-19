@@ -1,23 +1,35 @@
 <section>
     <form>
         <div class="container">
-            <div class="row justify-content-md-center my-4">
-                <h3 class="players-h3">Player 1</h3>
-            </div>
-            <div class="text-center mb-4">
-                <img src="/images/santa-p1.png" alt="santaclaus">
-            </div>
-            <div class="form-row justify-content-md-center">
-                <div class="row">
-                    <div class="col-12">
-                        <input type="text" id="name1" class="form-control" placeholder="Name(2-10 characters)">
+            <div class="row my-4">
+                <div class="col-md-6 pl">
+                    <div class="col-wrapper">
+                        <h3 class="players-h3 text-center">Player 1</h3>
+                        <div class="text-center">
+                            <img src="/images/santa-p1.png" alt="santaclaus">
+                        </div>
+                        <div class="col-md-8 offset-2">
+                            <input type="text" id="name1" class="form-control" placeholder="Name(2-10 characters)">
+                        </div>
+                        <div class="col-md-8 offset-2">
+                            <select class="custom-select type-wrapper mr-sm-2" id="type1">
+                                <option selected>Choose type...</option>
+                                <option>Human</option>
+                                <option>Computer</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="form-row align-items-center justify-content-md-center">
-                        <div class="col-auto my-1">
+                <div class="col-md-6 pl">
+                    <div class="col-wrapper">
+                        <h3 class="players-h3 text-center">Player 2</h3>
+                        <div class="text-center">
+                            <img src="/images/snowman-p2.png" alt="snowman">
+                        </div>
+                        <div class="col-8 offset-2">
+                            <input type="text" id="name2" class="type-name form-control" placeholder="Name(2-10 characters)">
+                        </div>
+                        <div class="col-8 offset-2">
                             <select class="custom-select type-wrapper mr-sm-2" id="type1">
                                 <option selected>Choose type...</option>
                                 <option>Human</option>
@@ -28,40 +40,13 @@
                 </div>
             </div>
         </div>
-        </div>
-        <div class="container">
-            <div class="row justify-content-md-center my-4">
-                <h3 class="players-h3">Player 2</h3>
-            </div>
-            <div class="text-center mb-4">
-                <img src="/images/snowman-p2.png" alt="snowman">
-            </div>
-            <div class="form-row justify-content-md-center">
-                <div class="row">
-                    <div class="col-12">
-                        <input type="text" id="name2" class="type-name form-control" placeholder="Name(2-10 characters)">
-                    </div>
-                </div>
-            </div>
-            <div class="form-row align-items-center justify-content-md-center">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="col-auto my-1">
-                            <select class="custom-select type-wrapper mr-sm-2" id="type2">
-                                <option selected>Choose type...</option>
-                                <option>Human</option>
-                                <option>Computer</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
         <div class="row justify-content-md-center">
             <button type="button" class="btn start-game btn-style-form btn-primary mt-5">Play the game</button>
         </div>
     </form>
+
+
+
     <div class="modal modal-name validate-name-modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

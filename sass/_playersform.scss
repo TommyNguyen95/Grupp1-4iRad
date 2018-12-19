@@ -1,13 +1,8 @@
-// .type-name{
-//     border-width: 9px;
-//     border-image: repeating-linear-gradient(30deg, red, green, red 12px) 10;
-// }
-
-.pl{
+.col-wrapper{
     background: rgba(255,255, 255, 0.4 );
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    width: 340px;
+    height: 340px;
 }
 
 .form-control:focus {
