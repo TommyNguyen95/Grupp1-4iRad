@@ -72,18 +72,27 @@
   animation: miniBounce 0.4s ease-in-out;
 }
 
-@media (max-width: 575.98px) {
-  .dav-game-board {
-    max-width: 40%;
-    margin-top: 50px;
-  }
-}
+
 .winning-line1{
   animation: winningLine 1s ease-in-out;
   background-image:url('/images/p1win.png');
   background-size: cover; 
   
 }
+.winning-line2{
+  animation: winningLine 1s ease-in-out;
+  background-image:url('/images/p2win.png');
+  background-size: cover; 
+  
+}
+
+@media (max-width: 575.98px) {
+  .dav-game-board {
+    max-width: 40%;
+    margin-top: 50px;
+  }
+}
+
 
 @media (max-width: 992px) {
   .dav-game-board {

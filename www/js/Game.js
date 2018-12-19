@@ -193,6 +193,12 @@ class Game extends Component {
         for (let row = 0; row < 6; row++) {
           if (this.board[row][col].value == i) {
             if ((this.board[row][col + 1].value == i) && (this.board[row][col + 2].value == i) && (this.board[row][col + 3].value == i)) {
+              if (this.board[row][col].value === 1) {
+                this.board[row][col + 1].winningLine += 1, this.board[row][col + 2].winningLine += 1,this.board[row][col + 3].winningLine += 1, this.board[row][col].winningLine += 1
+              } else {
+                this.board[row][col + 1].winningLine += 2, this.board[row][col + 2].winningLine += 2,this.board[row][col + 3].winningLine += 2, this.board[row][col].winningLine += 2
+
+              }
               this.gameOver(i);
               return true;
             }
@@ -207,9 +213,14 @@ class Game extends Component {
         for (let row = 0; row < 3; row++) {
           if (this.board[row][col].value == i) {
             if ((this.board[row + 1][col].value == i) && (this.board[row + 2][col].value == i) && (this.board[row + 3][col].value == i)) {
-              this.board[row + 1][col].winningLine+=1, this.board[row + 2][col].winningLine+=1,this.board[row + 3][col].winningLine+=1 , this.board[row][col].winningLine+=1;
+              if (this.board[row][col].value === 1) {
+                this.board[row + 1][col].winningLine += 1, this.board[row + 2][col].winningLine += 1, this.board[row + 3][col].winningLine += 1, this.board[row][col].winningLine += 1
+              } else {
+                this.board[row + 1][col].winningLine += 2, this.board[row + 2][col].winningLine += 2, this.board[row + 3][col].winningLine += 2, this.board[row][col].winningLine += 2
+              }
               this.gameOver(i);
               return true;
+
             }
           }
         }
@@ -222,6 +233,12 @@ class Game extends Component {
         for (let row = 0; row < 3; row++) {
           if (this.board[row][col].value == i) {
             if ((this.board[row + 1][col + 1].value == i) && (this.board[row + 2][col + 2].value == i) && (this.board[row + 3][col + 3].value == i)) {
+              if (this.board[row][col].value === 1) {
+                this.board[row + 1][col + 1].winningLine += 1, this.board[row + 2][col + 2].winningLine += 1,this.board[row + 3][col + 3].winningLine += 1, this.board[row][col].winningLine += 1
+              } else {
+                this.board[row + 1][col + 1].winningLine += 2, this.board[row + 2][col + 2].winningLine += 2,this.board[row + 3][col + 3].winningLine += 2, this.board[row][col].winningLine += 2
+
+              }
               this.gameOver(i);
               return true;
             }
@@ -236,6 +253,12 @@ class Game extends Component {
         for (let row = 3; row < 6; row++) {
           if (this.board[row][col].value == i) {
             if ((this.board[row - 1][col + 1].value == i) && (this.board[row - 2][col + 2].value == i) && (this.board[row - 3][col + 3].value == i)) {
+              if (this.board[row][col].value === 1) {
+                this.board[row - 1][col + 1].winningLine += 1, this.board[row - 2][col + 2].winningLine += 1,this.board[row - 3][col + 3].winningLine += 1, this.board[row][col].winningLine += 1
+              } else {
+                this.board[row - 1][col + 1].winningLine += 2, this.board[row - 2][col + 2].winningLine += 2,this.board[row - 3][col + 3].winningLine += 2, this.board[row][col].winningLine += 2
+
+              }
               this.gameOver(i);
               return true;
             }
@@ -246,14 +269,14 @@ class Game extends Component {
   }
 
   gameOver(player) {
-    
+
     this.winCount = (player === 1) ? this.moveCounter1 : this.moveCounter2;
     this.winner = (player === 1) ? this.player1.name : this.player2.name;
     this.render();
     if (this.winner == 'Computer1' || this.winner == 'Computer2') {
     } else {
       App.highscorePage.addHiScore(this.winner, this.winCount);
-      this.doIgnore=true;
+      this.doIgnore = true;
     }
     setTimeout(function () { $('.win-modal').modal('show'); }, 4000);
 
