@@ -18,6 +18,14 @@
   100%{ -webkit-transform:translateY(0)rotate(-45deg) ;}
 }
 
+@keyframes winningLine {
+  0%{ -webkit-transform:rotate(0deg);}
+  30%{ -webkit-transform:rotate(60deg) ;}
+  60%{ -webkit-transform:rotate(120deg) ;}
+  70%{ -webkit-transform:rotate(180deg) ;}
+  100%{ -webkit-transform:rotate(360deg) ;}
+}
+
 .slots{
   width: calc(100% / 7);
   padding-top: calc(100% / 7);  
@@ -26,6 +34,7 @@
   border-radius: 50%;
   cursor:pointer;
   display:inline-block;
+
 }
 
 .player1 {
@@ -58,6 +67,13 @@
 
 .mini-bounce1{
   animation: miniBounce 0.4s ease-in-out;
+}
+
+.winning-line1{
+  animation: winningLine 1s ease-in-out;
+  background-image:url('/images/p1win.png');
+  background-size: cover; 
+  
 }
 
 

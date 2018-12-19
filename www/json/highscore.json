@@ -4,11 +4,11 @@
     "route": "/highScore",
     "title": "Highscore",
     "highscoreList": {
-      "_id": 65,
+      "_id": 54,
       "page": {
-        "_id": 66,
+        "_id": 53,
         "route": "/highScore",
-        "title": "High Score",
+        "title": "Highscore",
         "highscoreList": {
           "↻": "$.data.highscoreList"
         },
@@ -20,7 +20,34 @@
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "kim",
+          "name": "lklk",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 410,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "klkm",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 367,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "klkm",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 324,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "klkm",
           "score": 4,
           "⚙": "Item"
         },
@@ -29,80 +56,53 @@
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "gunnar",
+          "name": "lll",
           "score": 4,
           "⚙": "Item"
         },
         {
-          "_id": 156,
+          "_id": 284,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "Tommy",
-          "score": 4,
-          "⚙": "Item"
-        },
-        {
-          "_id": 156,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Orten",
-          "score": 4,
-          "⚙": "Item"
-        },
-        {
-          "_id": 156,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "greger",
-          "score": 5,
-          "⚙": "Item"
-        },
-        {
-          "_id": 156,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "greger",
-          "score": 5,
-          "⚙": "Item"
-        },
-        {
-          "_id": 156,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Britt-marie",
+          "name": "kkkk",
           "score": 6,
           "⚙": "Item"
         },
         {
-          "_id": 156,
+          "_id": 141,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "greger",
-          "score": 6,
-          "⚙": "Item"
-        },
-        {
-          "_id": 156,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Glen",
+          "name": "dsfsaf",
           "score": 7,
           "⚙": "Item"
         },
         {
-          "_id": 156,
+          "_id": 145,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "bert",
-          "score": 8,
+          "name": "dsgfd",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 188,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "dsgfd",
+          "score": 11,
+          "⚙": "Item"
+        },
+        {
+          "_id": 149,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "gfhfh",
+          "score": 4,
           "⚙": "Item"
         }
       ],
