@@ -5,11 +5,13 @@
 
 .dav-game-board{
     background-image: url('/images/snow2.jpg');
-    border-image: url('/images/lightwoho.gif');
     max-width: 40%;
     margin: 0 auto;
+    border-radius: 17px 17px 17px 17px;
+    -moz-border-radius: 17px 17px 17px 17px;
+    -webkit-border-radius: 17px 17px 17px 17px;
+    border: 6px solid red;
     border-style: ridge;
-    border: 50px;
 }
 
 @keyframes miniBounce {
@@ -43,7 +45,6 @@
 .current-player {
   font-size: 3vw;
   text-align: center;
-  margin-bottom: 5px;
   font-family: snowtext;
   color: red;
 }
@@ -64,7 +65,7 @@
 
 @media (max-width: 575.98px) {
   .dav-game-board {
-    max-width: 100%;
+    max-width: 40%;
     margin-top: 50px;
   }
 }
@@ -77,6 +78,6 @@
 
 @media (max-width: 350px) {
   .dav-game-board {
-  max-width: 100%;
+  max-width: 40%;
   }
 }
