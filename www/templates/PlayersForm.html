@@ -1,17 +1,15 @@
 <section>
     <form>
-        <div class="container">
+        <div class="container playersform-container">
             <div class="row my-4">
-                <div class="col-md-6 pl">
-                    <div class="col-wrapper">
-                        <h3 class="players-h3 text-center">Player 1</h3>
-                        <div class="text-center">
-                            <img src="/images/santa-p1.png" alt="santaclaus">
+                <div class="col-12 col-lg-6 pl">
+                    <div class="col-wrapper pt-5">
+                        <h3>Player 1</h3>
+                        <img src="/images/santa-p1.png" class="mb-3" alt="santaclaus">
+                        <div class="col-8 offset-2">
+                            <input type="text" id="name1" class="form-control mb-2" placeholder="Name(2-10 characters)">
                         </div>
-                        <div class="col-md-8 offset-2">
-                            <input type="text" id="name1" class="form-control" placeholder="Name(2-10 characters)">
-                        </div>
-                        <div class="col-md-8 offset-2">
+                        <div class="col-8 offset-2">
                             <select class="custom-select type-wrapper mr-sm-2" id="type1">
                                 <option selected>Choose type...</option>
                                 <option>Human</option>
@@ -20,14 +18,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 pl">
-                    <div class="col-wrapper">
-                        <h3 class="players-h3 text-center">Player 2</h3>
-                        <div class="text-center">
-                            <img src="/images/snowman-p2.png" alt="snowman">
-                        </div>
+                <div class="col-12 col-lg-6 pl">
+                    <div class="col-wrapper pt-5">
+                        <h3>Player 2</h3>
+                        <img src="/images/snowman-p2.png" class="mb-3" alt="snowman">
                         <div class="col-8 offset-2">
-                            <input type="text" id="name2" class="type-name form-control" placeholder="Name(2-10 characters)">
+                            <input type="text" id="name2" class="form-control mb-2" placeholder="Name(2-10 characters)">
                         </div>
                         <div class="col-8 offset-2">
                             <select class="custom-select type-wrapper mr-sm-2" id="type1">
@@ -39,10 +35,11 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <button type="button" class="btn start-game btn-style-form btn-primary my-5 py-3">Play the game</button>
+            </div>
         </div>
-        <div class="row justify-content-md-center">
-            <button type="button" class="btn start-game btn-style-form btn-primary mt-5">Play the game</button>
-        </div>
+
     </form>
 
 
