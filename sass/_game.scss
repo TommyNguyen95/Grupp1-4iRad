@@ -4,11 +4,13 @@
 }
 
 .dav-game-board{
-    background-color: red;
-    padding:5px;
-    border:10px green;
+    background-image: url('/images/snow2.jpg');
+    border-image: url('/images/lightwoho.gif');
+    max-width: 40%;
+    margin: 0 auto;
     border-style: ridge;
-  }
+    border: 50px;
+}
 
 @keyframes miniBounce {
   0%{ -webkit-transform:translateY(0px)rotate(-45deg);}
@@ -22,7 +24,7 @@
   width: calc(100% / 7);
   padding-top: calc(100% / 7);  
   border: 1px solid black;
-  background-color:white;
+  background-color:rgb(233, 233, 233);
   border-radius: 50%;
   cursor:pointer;
   display:inline-block;
@@ -39,7 +41,7 @@
 }
 
 .current-player {
-  font-size: 1.5vw;
+  font-size: 3vw;
   text-align: center;
   margin-bottom: 5px;
   font-family: snowtext;
@@ -60,4 +62,21 @@
   animation: miniBounce 0.4s ease-in-out;
 }
 
+@media (max-width: 575.98px) {
+  .dav-game-board {
+    max-width: 100%;
+    margin-top: 50px;
+  }
+}
 
+@media (max-width: 992px) {
+  .dav-game-board {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 350px) {
+  .dav-game-board {
+  max-width: 100%;
+  }
+}
