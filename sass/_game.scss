@@ -4,8 +4,7 @@
 }
 
 .dav-game-board{
-    padding-left: 50px;
-    padding-top: 40px;
+    margin-top: 10px;
     background-image: url();
     max-width: 45%;
     margin: 0 auto;
@@ -23,15 +22,32 @@
   100%{ -webkit-transform:translateY(0)rotate(-45deg) ;}
 }
 
-.slots{
-  margin-right: 5px;
-  width: calc(13%);
-  padding-top: calc(13%);  
-  border: 1px solid black;
-  background-color:rgb(233, 233, 233);
+ .slots{
+//   box-sizing: border-box;
+//   margin-right: 5px;     
+     width: calc(14.28%);
+//   padding-top: calc(13%);  
+//   border: 1px solid black;
+//   background-color:rgb(233, 233, 233);
+//   border-radius: 50%;
+//   cursor:pointer;
+//   display:inline-block;
+}
+
+.slots > div {
+  padding-top: 100%;
+  position:relative;
+}
+ 
+.slots > div > div {
+  position:absolute;
+  top:10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
-  cursor:pointer;
-  display:inline-block;
+  border: 1px solid black;
+  background-color: white;
 }
 
 .player1 {
@@ -87,4 +103,8 @@
   .dav-game-board {
     max-width: 95%;
   }
+}
+
+.game {
+  margin-top: 20px;
 }
