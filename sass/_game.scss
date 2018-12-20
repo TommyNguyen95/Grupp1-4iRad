@@ -4,14 +4,14 @@
 }
 
 .dav-game-board{
-    background-image: url('/images/snow2.jpg');
-    max-width: 40%;
+    margin-top: 10px;
+    background-image: url();
+    max-width: 45%;
     margin: 0 auto;
     border-radius: 17px 17px 17px 17px;
     -moz-border-radius: 17px 17px 17px 17px;
     -webkit-border-radius: 17px 17px 17px 17px;
     border: 6px solid red;
-    border-style: ridge;
 }
 
 @keyframes miniBounce {
@@ -29,16 +29,32 @@
   70%{ -webkit-transform:rotate(180deg) ;}
   100%{ -webkit-transform:rotate(360deg) ;}
 }
+ .slots{
+//   box-sizing: border-box;
+//   margin-right: 5px;     
+     width: calc(14.28%);
+//   padding-top: calc(13%);  
+//   border: 1px solid black;
+//   background-color:rgb(233, 233, 233);
+//   border-radius: 50%;
+//   cursor:pointer;
+//   display:inline-block;
+}
 
-.slots{
-  width: calc(100% / 7);
-  padding-top: calc(100% / 7);  
-  border: 1px solid black;
-  background-color:rgb(233, 233, 233);
+.slots > div {
+  padding-top: 100%;
+  position:relative;
+}
+ 
+.slots > div > div {
+  position:absolute;
+  top:10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
-  cursor:pointer;
-  display:inline-block;
-
+  border: 1px solid black;
+  background-color: white;
 }
 
 .player1 {
@@ -86,22 +102,30 @@
   
 }
 
-@media (max-width: 575.98px) {
+@media screen and (max-width: 600px) {
   .dav-game-board {
-    max-width: 40%;
-    margin-top: 50px;
+    max-width: 95%;
   }
 }
 
-
-@media (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .dav-game-board {
-    max-width: 60%;
+    max-width: 95%;
   }
 }
 
-@media (max-width: 350px) {
+@media screen and (max-width: 992px) {
   .dav-game-board {
-  max-width: 40%;
+    max-width: 95%;
   }
+}
+
+@media screen and (max-width: 1200px) {
+  .dav-game-board {
+    max-width: 95%;
+  }
+}
+
+.game {
+  margin-top: 20px;
 }
