@@ -8,32 +8,36 @@ class List extends Component {
 
 
     addHiscore(name, score){
-        if(this.items.length <  10){
-            this.items.push(new Item(this, name, score));
-        }
-        else{
-            let lowestRank = this.items.length -1;
-            let lowestRankScore = this.items[lowestRank].score;
+        if(name === 'Computer1' || 'Computer2'){
 
-            if (score <= lowestRankScore && this.items.length <= 10){
+        }else{
+            if(this.items.length <  10){
+                this.items.push(new Item(this, name, score));
+            }
+            else{
+                let lowestRank = this.items.length -1;
+                let lowestRankScore = this.items[lowestRank].score;
 
-                for(let i = 0; i <= this.items.length - 1; i++){
+                if (score <= lowestRankScore && this.items.length <= 10){
 
-                    if(this.items[i].score >= score){
+                    for(let i = 0; i <= this.items.length - 1; i++){
 
-                        let newIndex = this.items.indexOf(this.items[i])
-                        i = this.items.length;
+                        if(this.items[i].score >= score){
 
-                        this.items.splice(newIndex, 0, new Item(this, name, score));
+                            let newIndex = this.items.indexOf(this.items[i])
+                            i = this.items.length;
+
+                            this.items.splice(newIndex, 0, new Item(this, name, score));
+                        }
                     }
+
                 }
 
-            }
+                if(this.items.length > 10){
+                
+                    this.removeHiscore(lowestRank);
 
-            if(this.items.length > 10){
-            
-                this.removeHiscore(lowestRank);
-
+                }
             }
         }
   
