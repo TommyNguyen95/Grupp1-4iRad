@@ -282,12 +282,13 @@ class Game extends Component {
     this.winCount = (player === 1) ? this.moveCounter1 : this.moveCounter2;
     this.winner = (player === 1) ? this.player1.name : this.player2.name;
     this.render();
+    this.doIgnore = true;
     if (this.winner == 'Computer1' || this.winner == 'Computer2') {
     } else {
       App.highscorePage.addHiScore(this.winner, this.winCount);
-      this.doIgnore = true;
+      
     }
-    setTimeout(function () { $('.win-modal').modal('show'); }, 4000);
+    setTimeout(function () { $('.win-modal').modal('show'); }, 2500);
 
   }
 
