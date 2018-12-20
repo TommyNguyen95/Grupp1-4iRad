@@ -8,6 +8,7 @@ class List extends Component {
 
 
     addHiscore(name, score){
+
         if(this.items.length <  10){
             this.items.push(new Item(this, name, score));
         }
@@ -36,9 +37,9 @@ class List extends Component {
 
             }
         }
-  
+
     }
-  
+
     removeHiscore(item){
         this.items.splice(this.items.indexOf(item), 1);
         this.page.update();
