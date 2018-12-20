@@ -6,7 +6,7 @@
 .dav-game-board{
     margin-top: 10px;
     background-image: url();
-    max-width: 45%;
+    max-width: 40%;
     margin: 0 auto;
     border-radius: 17px 17px 17px 17px;
     -moz-border-radius: 17px 17px 17px 17px;
@@ -131,21 +131,19 @@
 
 @media only screen and (max-device-width: 640px) and (orientation: landscape) {
   .dav-game-board {
-    max-width: 512px;
+    max-width: 520px;
   }
 }
 
 @media only screen and (max-device-width: 812px) and (min-device-width: 641px) and (orientation: landscape) {
   .dav-game-board {
-    max-width: 350px;
-    min-width: 350px;
+    max-width: 520px;
   }
 }
 
-@media only screen and (max-device-width: 823px) and (min-device-width: 813px) and (orientation: landscape) {
+@media only screen and (max-device-width: 823px) and (min-device-width: 812px) and (orientation: landscape) {
   .dav-game-board {
-    max-width: 435px;
-    min-width: 435px;
+    max-width: 405px;
   }
 }
 
