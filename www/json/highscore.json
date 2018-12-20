@@ -16,6 +16,15 @@
       },
       "items": [
         {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "fafa",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
           "_id": 585,
           "list": {
             "↻": "$.data.highscoreList"
@@ -79,30 +88,21 @@
           "⚙": "Item"
         },
         {
+          "_id": 199,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "fafa",
+          "score": 7,
+          "⚙": "Item"
+        },
+        {
           "_id": 318,
           "list": {
             "↻": "$.data.highscoreList"
           },
           "name": "david",
           "score": 8,
-          "⚙": "Item"
-        },
-        {
-          "_id": 404,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "della",
-          "score": 7,
-          "⚙": "Item"
-        },
-        {
-          "_id": 490,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "fanny",
-          "score": 7,
           "⚙": "Item"
         }
       ],
