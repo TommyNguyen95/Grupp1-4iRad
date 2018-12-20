@@ -33,6 +33,8 @@ class Game extends Component {
     this.startGame();
   }
 
+  //The dropcoinStart methods initiates the drop of a token when you click a column. The reason for there being seven of them instead of one
+  // is because I don't know how to send an argument through addEvents.
   dropCoinStart0() {
     this.fall(0);
   }
@@ -61,10 +63,11 @@ class Game extends Component {
     this.fall(6);
   }
 
+  //this method is for the animation of the tokens and also calls the method(dropCoin()) with the code for dropping the tokens.
   async fall(col) {
     if(this.doIgnore){
       return;
-    }    
+    }  
     for (let row = 0; row < 6; row++) {
       if (this.board[row][col].value == 0) {
         if (this.activePlayer === 1) {
@@ -86,6 +89,8 @@ class Game extends Component {
     this.dropCoin(col);
   }
 
+  //this method is almost the same as fall() but is used by bots. The only difference basically is that fall() gets disabled when
+  // two bots play so it isn't possible to click the board.
   async fall2(col) {
     for (let row = 0; row < 6; row++) {
       if (this.board[row][col].value == 0) {
@@ -101,19 +106,23 @@ class Game extends Component {
           this.board[row][col].animate -= 2;
         }
 
-
       }
 
     }
 
-    this.dropCoin2(col);
+    this.dropCoin(col);
+  
+    
   }
 
-  dropCoin(col) {
+  //This is the method with the code for dropping the tokens and switching players(activePlayer and playerName) and keeping track of 
+  // number of moves(moveCounter 1 and 2) and calling the method detectWin() which checks if someone won. It also checks if the next
+  // player is a computer and if so calls the method doCompMove() which makes the move for the bot. Finally it checks if the board is 
+  // full and if it is and noone is a winner it shows the draw-modal. (The miniBounce thing makes the animation for the bounce).
+  async dropCoin(col) {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].value == 0) {
         if (this.activePlayer === 1) {
-          this.render();
           this.board[row][col].miniBounce += 1
           this.moveCounter1++;
         }
@@ -127,12 +136,12 @@ class Game extends Component {
         this.render();
         this.board[row][col].miniBounce -= 1
         this.detectWin();
-
+        await this.sleep(1000);        
         if (this.checkType() === 'Computer') {
           if (this.winner) {
             return;
           }
-          this.fall(Math.floor(Math.random() * 7));
+          this.doCompMove();
         }
         if (this.moveCounter1 + this.moveCounter2 === 42 && !this.winner) {
           $('.draw-modal').modal('show');
@@ -142,41 +151,37 @@ class Game extends Component {
     }
   }
 
-  dropCoin2(col) {
-    for (let row = 5; row >= 0; row--) {
-      if (this.board[row][col].value == 0) {
-        if (this.activePlayer === 1) {
-          this.board[row][col].miniBounce += 1
-          this.moveCounter1++;
-        }
-        else if (this.activePlayer === 2) {
-          this.board[row][col].miniBounce += 1
-          this.moveCounter2++;
-        }
-        this.board[row][col].value = this.activePlayer;
-        this.activePlayer = (this.activePlayer === 1) ? 2 : 1;
-        this.playerName = (this.activePlayer === 1) ? this.player1.name : this.player2.name;
-        this.render();
-        this.board[row][col].miniBounce -= 1
-        this.detectWin();
-        return;
-      }
+  //Method that makes moves for the bots. Generates a random number between 0 and 6 and attempts to drop a token there.
+  // If the column is full it calls on itself and tries again.
+  doCompMove(){
+    let rndNr = Math.floor(Math.random() * 7);
+    if(this.checkIfColNotFull(rndNr)){
+      this.fall2(rndNr);
+      return;
+    }
+    else{
+      this.doCompMove();
     }
   }
 
+  //Method that returns true if the column checked is not full.
+  checkIfColNotFull(col){
+    for (let row = 5; row >= 0; row--) {
+      if (this.board[row][col].value === 0) {
+        return true;
+      }      
+    }
+    return false;
+  }
+
+  //Method returns true if both player types are Computer.
   checkIfTwoComp() {
     if (this.player1.type === 'Computer' && this.player2.type === 'Computer') {
       return true;
     }
   }
 
-  async runTwoComp() {
-    while (!this.winner) {
-      this.fall2(Math.floor(Math.random() * 7));
-      await this.sleep(1000);
-    }
-  }
-
+  //Method that returns the type of the current player.
   checkType() {
     if (this.activePlayer === 1) {
       return this.player1.type;
@@ -186,6 +191,8 @@ class Game extends Component {
     }
   }
 
+  //This is the method that checks wether someone has won. It loops through the needed number of columns/rows once for each player.
+  // If a winner is found the gameOver() method is called with the winner's player number as argument.
   detectWin() {
     //horizontally
     for (let i = 1; i < 3; i++) {
@@ -244,6 +251,8 @@ class Game extends Component {
     }
   }
 
+  //Method that is called when somebody wins. Sets the winCount variable to the number of moves the winner did and the winner variable
+  // to the name of the winning player. It also sends those variables to the highscore page. Finally it shows the winner-modal.
   gameOver(player) {
     this.winCount = (player === 1) ? this.moveCounter1 : this.moveCounter2;
     this.winner = (player === 1) ? this.player1.name : this.player2.name;
@@ -256,6 +265,9 @@ class Game extends Component {
     
   }
 
+  //Method that renders the board and resets variables to starting conditions. It also checks if both players are bots and if so disables clicks
+  // and kickstarts the fall2() method which will automatically play for the bots. Finally if the check for two bots fails, it checks if the first
+  // player is a bot and if so makes the needed first move for it. 
   startGame() {
     this.gameBoard.renderBoard();
     this.doIgnore = false;
@@ -268,10 +280,10 @@ class Game extends Component {
     this.render();
     if (this.checkIfTwoComp()) {
       this.doIgnore = true;
-      this.runTwoComp();
+      this.fall2(Math.floor(Math.random() * 7));
     }
     else if (this.checkType() === 'Computer') {
-      this.fall2(Math.floor(Math.random() * 7));
+      this.fall(Math.floor(Math.random() * 7));
     }
   }
 }

@@ -4,11 +4,16 @@
 }
 
 .dav-game-board{
-    background-color: red;
-    padding:5px;
-    border:10px green;
-    border-style: ridge;
-  }
+    padding-left: 50px;
+    padding-top: 40px;
+    background-image: url();
+    max-width: 45%;
+    margin: 0 auto;
+    border-radius: 17px 17px 17px 17px;
+    -moz-border-radius: 17px 17px 17px 17px;
+    -webkit-border-radius: 17px 17px 17px 17px;
+    border: 6px solid red;
+}
 
 @keyframes miniBounce {
   0%{ -webkit-transform:translateY(0px)rotate(-45deg);}
@@ -19,10 +24,11 @@
 }
 
 .slots{
-  width: calc(100% / 7);
-  padding-top: calc(100% / 7);  
+  margin-right: 5px;
+  width: calc(13%);
+  padding-top: calc(13%);  
   border: 1px solid black;
-  background-color:white;
+  background-color:rgb(233, 233, 233);
   border-radius: 50%;
   cursor:pointer;
   display:inline-block;
@@ -39,9 +45,8 @@
 }
 
 .current-player {
-  font-size: 1.5vw;
+  font-size: 3vw;
   text-align: center;
-  margin-bottom: 5px;
   font-family: snowtext;
   color: red;
 }
@@ -60,4 +65,26 @@
   animation: miniBounce 0.4s ease-in-out;
 }
 
+@media screen and (max-width: 600px) {
+  .dav-game-board {
+    max-width: 95%;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .dav-game-board {
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .dav-game-board {
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .dav-game-board {
+    max-width: 95%;
+  }
+}
