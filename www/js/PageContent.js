@@ -7,7 +7,6 @@ class PageContent extends Component {
     App.gamestartPage = this.gamestartPage;
     this.missingPage = new MissingPage();
     this.gameBoard = new GameBoard();
-    this.gameRulesPage = new GameRulesPage();
     this.highscorePage = new HighScorePage();
     App.highscorePage = this.highscorePage;
     this.loadHighscoreData();

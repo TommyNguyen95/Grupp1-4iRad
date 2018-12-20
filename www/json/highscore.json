@@ -1,6 +1,6 @@
 {
   "data": {
-    "_id": 54,
+    "_id": 53,
     "route": "/highScore",
     "title": "Highscore",
     "highscoreList": {
@@ -16,11 +16,11 @@
       },
       "items": [
         {
-          "_id": 157,
+          "_id": 409,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "eee",
+          "name": "gww",
           "score": 4,
           "⚙": "Item"
         },
@@ -79,15 +79,6 @@
           "⚙": "Item"
         },
         {
-          "_id": 157,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "eee",
-          "score": 6,
-          "⚙": "Item"
-        },
-        {
           "_id": 156,
           "list": {
             "↻": "$.data.highscoreList"
@@ -103,6 +94,15 @@
           },
           "name": "greger",
           "score": 6,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Glen",
+          "score": 7,
           "⚙": "Item"
         }
       ],
