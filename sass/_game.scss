@@ -128,3 +128,30 @@
 .game {
   margin-top: 20px;
 }
+
+@media only screen and (max-device-width: 640px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 512px;
+  }
+}
+
+@media only screen and (max-device-width: 812px) and (min-device-width: 641px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 350px;
+    min-width: 350px;
+  }
+}
+
+@media only screen and (max-device-width: 823px) and (min-device-width: 813px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 435px;
+    min-width: 435px;
+  }
+}
+
+@media only screen and (max-device-width: 1025px) and (min-device-width: 823px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 750px;
+    min-width: 750px;
+  }
+}
