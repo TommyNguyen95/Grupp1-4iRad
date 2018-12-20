@@ -111,8 +111,8 @@ class Game extends Component {
     }
 
     this.dropCoin(col);
-  
-    
+
+
   }
 
   //This is the method with the code for dropping the tokens and switching players(activePlayer and playerName) and keeping track of 
@@ -136,7 +136,7 @@ class Game extends Component {
         this.render();
         this.board[row][col].miniBounce -= 1
         this.detectWin();
-        await this.sleep(1000);        
+        await this.sleep(1000);
         if (this.checkType() === 'Computer') {
           if (this.winner) {
             return;
@@ -153,23 +153,23 @@ class Game extends Component {
 
   //Method that makes moves for the bots. Generates a random number between 0 and 6 and attempts to drop a token there.
   // If the column is full it calls on itself and tries again.
-  doCompMove(){
+  doCompMove() {
     let rndNr = Math.floor(Math.random() * 7);
-    if(this.checkIfColNotFull(rndNr)){
+    if (this.checkIfColNotFull(rndNr)) {
       this.fall2(rndNr);
       return;
     }
-    else{
+    else {
       this.doCompMove();
     }
   }
 
   //Method that returns true if the column checked is not full.
-  checkIfColNotFull(col){
+  checkIfColNotFull(col) {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].value === 0) {
         return true;
-      }      
+      }
     }
     return false;
   }
@@ -201,9 +201,9 @@ class Game extends Component {
           if (this.board[row][col].value == i) {
             if ((this.board[row][col + 1].value == i) && (this.board[row][col + 2].value == i) && (this.board[row][col + 3].value == i)) {
               if (this.board[row][col].value === 1) {
-                this.board[row][col + 1].winningLine += 1, this.board[row][col + 2].winningLine += 1,this.board[row][col + 3].winningLine += 1, this.board[row][col].winningLine += 1
+                this.board[row][col + 1].winningLine += 1, this.board[row][col + 2].winningLine += 1, this.board[row][col + 3].winningLine += 1, this.board[row][col].winningLine += 1
               } else {
-                this.board[row][col + 1].winningLine += 2, this.board[row][col + 2].winningLine += 2,this.board[row][col + 3].winningLine += 2, this.board[row][col].winningLine += 2
+                this.board[row][col + 1].winningLine += 2, this.board[row][col + 2].winningLine += 2, this.board[row][col + 3].winningLine += 2, this.board[row][col].winningLine += 2
 
               }
               this.gameOver(i);
@@ -241,9 +241,9 @@ class Game extends Component {
           if (this.board[row][col].value == i) {
             if ((this.board[row + 1][col + 1].value == i) && (this.board[row + 2][col + 2].value == i) && (this.board[row + 3][col + 3].value == i)) {
               if (this.board[row][col].value === 1) {
-                this.board[row + 1][col + 1].winningLine += 1, this.board[row + 2][col + 2].winningLine += 1,this.board[row + 3][col + 3].winningLine += 1, this.board[row][col].winningLine += 1
+                this.board[row + 1][col + 1].winningLine += 1, this.board[row + 2][col + 2].winningLine += 1, this.board[row + 3][col + 3].winningLine += 1, this.board[row][col].winningLine += 1
               } else {
-                this.board[row + 1][col + 1].winningLine += 2, this.board[row + 2][col + 2].winningLine += 2,this.board[row + 3][col + 3].winningLine += 2, this.board[row][col].winningLine += 2
+                this.board[row + 1][col + 1].winningLine += 2, this.board[row + 2][col + 2].winningLine += 2, this.board[row + 3][col + 3].winningLine += 2, this.board[row][col].winningLine += 2
 
               }
               this.gameOver(i);
@@ -261,9 +261,9 @@ class Game extends Component {
           if (this.board[row][col].value == i) {
             if ((this.board[row - 1][col + 1].value == i) && (this.board[row - 2][col + 2].value == i) && (this.board[row - 3][col + 3].value == i)) {
               if (this.board[row][col].value === 1) {
-                this.board[row - 1][col + 1].winningLine += 1, this.board[row - 2][col + 2].winningLine += 1,this.board[row - 3][col + 3].winningLine += 1, this.board[row][col].winningLine += 1
+                this.board[row - 1][col + 1].winningLine += 1, this.board[row - 2][col + 2].winningLine += 1, this.board[row - 3][col + 3].winningLine += 1, this.board[row][col].winningLine += 1
               } else {
-                this.board[row - 1][col + 1].winningLine += 2, this.board[row - 2][col + 2].winningLine += 2,this.board[row - 3][col + 3].winningLine += 2, this.board[row][col].winningLine += 2
+                this.board[row - 1][col + 1].winningLine += 2, this.board[row - 2][col + 2].winningLine += 2, this.board[row - 3][col + 3].winningLine += 2, this.board[row][col].winningLine += 2
 
               }
               this.gameOver(i);
@@ -282,14 +282,13 @@ class Game extends Component {
     this.winCount = (player === 1) ? this.moveCounter1 : this.moveCounter2;
     this.winner = (player === 1) ? this.player1.name : this.player2.name;
     this.render();
-
-
-    if(this.winner === 'Computer1' || this.winner === 'Computer2'){
-    }else{
-    App.highscorePage.addHiScore(this.winner, this.winCount);
+    this.doIgnore = true;
+    if (this.winner === 'Computer1' || this.winner === 'Computer2') {
+    } else {
+      App.highscorePage.addHiScore(this.winner, this.winCount);
     }
-    setTimeout(function(){$('.win-modal').modal('show');}, 100);
-    
+    setTimeout(function () { $('.win-modal').modal('show'); }, 2000);
+
   }
 
   //Method that renders the board and resets variables to starting conditions. It also checks if both players are bots and if so disables clicks

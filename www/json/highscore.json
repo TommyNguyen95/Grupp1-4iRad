@@ -14,7 +14,98 @@
         },
         "⚙": "HighScorePage"
       },
-      "items": [],
+      "items": [
+        {
+          "_id": 585,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "sdfasdf",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 414,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "fdsafasf",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 328,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "fdsafasf",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 242,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "gfgd",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 156,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Della",
+          "score": 6,
+          "⚙": "Item"
+        },
+        {
+          "_id": 146,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "asdfasf",
+          "score": 6,
+          "⚙": "Item"
+        },
+        {
+          "_id": 232,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "asdfasf",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 318,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "david",
+          "score": 8,
+          "⚙": "Item"
+        },
+        {
+          "_id": 404,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "della",
+          "score": 7,
+          "⚙": "Item"
+        },
+        {
+          "_id": 490,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "fanny",
+          "score": 7,
+          "⚙": "Item"
+        }
+      ],
       "⚙": "List"
     },
     "⚙": "HighScorePage"
