@@ -4,14 +4,15 @@
 }
 
 .dav-game-board{
-    background-image: url('/images/snow2.jpg');
-    max-width: 40%;
+    padding-left: 50px;
+    padding-top: 40px;
+    background-image: url();
+    max-width: 45%;
     margin: 0 auto;
     border-radius: 17px 17px 17px 17px;
     -moz-border-radius: 17px 17px 17px 17px;
     -webkit-border-radius: 17px 17px 17px 17px;
     border: 6px solid red;
-    border-style: ridge;
 }
 
 @keyframes miniBounce {
@@ -23,8 +24,9 @@
 }
 
 .slots{
-  width: calc(100% / 7);
-  padding-top: calc(100% / 7);  
+  margin-right: 5px;
+  width: calc(13%);
+  padding-top: calc(13%);  
   border: 1px solid black;
   background-color:rgb(233, 233, 233);
   border-radius: 50%;
@@ -63,21 +65,26 @@
   animation: miniBounce 0.4s ease-in-out;
 }
 
-@media (max-width: 575.98px) {
+@media screen and (max-width: 600px) {
   .dav-game-board {
-    max-width: 40%;
-    margin-top: 50px;
+    max-width: 95%;
   }
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .dav-game-board {
-    max-width: 60%;
+    max-width: 95%;
   }
 }
 
-@media (max-width: 350px) {
+@media screen and (max-width: 992px) {
   .dav-game-board {
-  max-width: 40%;
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .dav-game-board {
+    max-width: 95%;
   }
 }
