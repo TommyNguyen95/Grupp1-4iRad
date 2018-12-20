@@ -22,6 +22,13 @@
   100%{ -webkit-transform:translateY(0)rotate(-45deg) ;}
 }
 
+@keyframes winningLine {
+  0%{ -webkit-transform:rotate(0deg);}
+  30%{ -webkit-transform:rotate(60deg) ;}
+  60%{ -webkit-transform:rotate(120deg) ;}
+  70%{ -webkit-transform:rotate(180deg) ;}
+  100%{ -webkit-transform:rotate(360deg) ;}
+}
  .slots{
 //   box-sizing: border-box;
 //   margin-right: 5px;     
@@ -46,7 +53,7 @@
   width: 80%;
   height: 80%;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 3px solid red;
   background-color: white;
 }
 
@@ -81,6 +88,20 @@
   animation: miniBounce 0.4s ease-in-out;
 }
 
+
+.winning-line1{
+  animation: winningLine 1s ease-in-out;
+  background-image:url('/images/p1win.png');
+  background-size: cover; 
+  
+}
+.winning-line2{
+  animation: winningLine 1s ease-in-out;
+  background-image:url('/images/p2win.png');
+  background-size: cover; 
+  
+}
+
 @media screen and (max-width: 600px) {
   .dav-game-board {
     max-width: 95%;
@@ -104,7 +125,6 @@
     max-width: 95%;
   }
 }
-
 .game {
   margin-top: 20px;
 }
