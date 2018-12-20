@@ -16,6 +16,15 @@
       },
       "items": [
         {
+          "_id": 409,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "gww",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
           "_id": 156,
           "list": {
             "↻": "$.data.highscoreList"
@@ -94,15 +103,6 @@
           },
           "name": "Glen",
           "score": 7,
-          "⚙": "Item"
-        },
-        {
-          "_id": 156,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "bert",
-          "score": 8,
           "⚙": "Item"
         }
       ],
