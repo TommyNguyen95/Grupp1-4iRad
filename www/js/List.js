@@ -8,9 +8,7 @@ class List extends Component {
 
 
     addHiscore(name, score){
-        if(name === 'Computer1' || 'Computer2'){
 
-        }else{
             if(this.items.length <  10){
                 this.items.push(new Item(this, name, score));
             }
@@ -39,7 +37,6 @@ class List extends Component {
 
                 }
             }
-        }
   
     }
   
