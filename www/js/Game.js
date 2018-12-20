@@ -14,7 +14,8 @@ class Game extends Component {
       'click .col4': 'dropCoinStart4',
       'click .col5': 'dropCoinStart5',
       'click .col6': 'dropCoinStart6',
-      'click .restartButton': 'startGame'
+      'click .restartButton': 'startGame',
+      'click .win-modal-wrapper': 'winModal'
     });
 
     this.playerName = this.player1.name;
@@ -115,9 +116,9 @@ class Game extends Component {
 
   }
 
-  //This is the method with the code for dropping the tokens and switching players(activePlayer and playerName) and keeping track of 
+  //This is the method with the code for dropping the tokens and switching players(activePlayer and playerName) and keeping track of
   // number of moves(moveCounter 1 and 2) and calling the method detectWin() which checks if someone won. It also checks if the next
-  // player is a computer and if so calls the method doCompMove() which makes the move for the bot. Finally it checks if the board is 
+  // player is a computer and if so calls the method doCompMove() which makes the move for the bot. Finally it checks if the board is
   // full and if it is and noone is a winner it shows the draw-modal. (The miniBounce thing makes the animation for the bounce).
   async dropCoin(col) {
     for (let row = 5; row >= 0; row--) {
@@ -293,7 +294,7 @@ class Game extends Component {
 
   //Method that renders the board and resets variables to starting conditions. It also checks if both players are bots and if so disables clicks
   // and kickstarts the fall2() method which will automatically play for the bots. Finally if the check for two bots fails, it checks if the first
-  // player is a bot and if so makes the needed first move for it. 
+  // player is a bot and if so makes the needed first move for it.
   startGame() {
     this.gameBoard.renderBoard();
     this.doIgnore = false;
@@ -311,5 +312,9 @@ class Game extends Component {
     else if (this.checkType() === 'Computer') {
       this.fall(Math.floor(Math.random() * 7));
     }
+  }
+
+  winModal() {
+    $('.win-modal').modal('show');
   }
 }
