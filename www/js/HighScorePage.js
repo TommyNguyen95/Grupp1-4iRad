@@ -20,7 +20,7 @@ class HighScorePage extends Component {
 
 
     update(){
-        this.render();
+        
         JSON._save('highscore', {data: this});
     }
 }
