@@ -8,5 +8,26 @@ class NavBar extends Component {
       new NavItem('Game Rules', '/game-rules'),
       new NavItem('Highscore', '/highScore'),
     ];
+    this.playButton();
+    this.addEvents({
+      'click .nav-link': 'playButton'
+    });
   }
+
+  async playButton(){
+
+    if(this.navItems[1].name === 'Restart'){
+      App.gamestartPage.unmount()
+    }
+    await this.navItems;
+    if (window.location.href === 'http://localhost:3000/play'){
+       this.navItems[1].name = 'Restart'
+
+     }else{
+      this.navItems[1].name = 'Play'
+      
+    }
+     this.render();
+  }
+  
 }
