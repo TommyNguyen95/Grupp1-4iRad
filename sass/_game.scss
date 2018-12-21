@@ -3,7 +3,7 @@
   src: url(/fonts/DSSnowfall.ttf);
 }
 
-.game-board{
+.dav-game-board{
     margin-top: 10px;
     background-image: url();
     max-width: 45%;
@@ -103,25 +103,25 @@
 }
 
 @media screen and (max-width: 600px) {
-  .game-board {
+  .dav-game-board {
     max-width: 95%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .game-board {
+  .dav-game-board {
     max-width: 95%;
   }
 }
 
 @media screen and (max-width: 992px) {
-  .game-board {
+  .dav-game-board {
     max-width: 95%;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .game-board {
+  .dav-game-board {
     max-width: 95%;
   }
 }
