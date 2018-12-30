@@ -52,3 +52,489 @@ h3{
 }
 }
 
+/* Portrait iPad */
+@media only screen
+  and (min-width: 768px)
+  and (max-width: 1023px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2){
+   .playersform-container .col-wrapper {
+        background: transparent;
+        height: 450px;
+
+        .content-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .players-wrapper {
+                width: 100%;
+
+                h3 {
+                    font-size: 70px;
+                }
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                input, select {
+                    height: 60px;
+                    font-size: 30px;
+                    border-radius: 10px;
+                }
+
+
+            }
+        }
+    }
+   .playersform-container{
+       .button-wrapper {
+            margin-bottom: 20px;
+
+           button {
+                width: 100%;
+                height: 100px;
+                font-size: 80px;
+                background-color: transparent;
+                border: 5px solid rgba(255,255,255,0.4);
+                line-height: 0;
+            }
+        }
+    }
+}
+
+/* Landscape iPadPro */
+@media only screen
+  and (min-width: 834px)
+  and (max-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .playersform-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px);
+    }
+
+    .playersform-container .btn-style-form {
+    font-family: snowyText;
+    font-size: 40px;
+    border: none;
+    background: rgba(255,255,255,0.4);
+    color: red;
+}
+}
+/* Portrait iPadPro */
+@media only screen
+  and (min-width: 1024px)
+  and (max-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2){
+   .playersform-container .col-wrapper {
+        background: transparent;
+        height: 950px;
+
+        .content-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .players-wrapper {
+                width: 100%;
+
+                h3 {
+                    font-size: 95px;
+                }
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                input, select {
+                    height: 80px;
+                    font-size: 30px;
+                    border-radius: 10px;
+                }
+
+
+            }
+        }
+    }
+   .playersform-container{
+        .btn-style-form {
+            width: 100%;
+            height: 145px;
+            font-size: 80px;
+            background-color: transparent;
+            border: 5px solid rgba(255,255,255,0.4);
+            line-height: 0;
+        }
+    }
+}
+
+  /* Portrait iPhone 5/SE & Pixel 2*/
+
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      .playersform-container .col-wrapper {
+        background: transparent;
+        width: 650px;
+        height: 650px;
+
+        .content-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .players-wrapper {
+                width: 100%;
+
+                h3 {
+                    font-size: 120px;
+                }
+
+                img {
+                    width: 250px;
+                    height: 250px;
+                }
+
+                input, select {
+                    height: 80px;
+                    font-size: 30px;
+                    border-radius: 10px;
+                }
+
+
+            }
+        }
+    }
+   .playersform-container{
+        .btn-style-form {
+            width: 100%;
+            height: 145px;
+            font-size: 80px;
+            background-color: transparent;
+            border: 5px solid rgba(255,255,255,0.4);
+            line-height: 0;
+        }
+    }
+}
+
+/* Landscape iPhone 5SE */
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .game {
+        margin-top: 0;
+    }
+
+    .playersform-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 117px);
+}
+    .playersform-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+
+        .row {
+            width: 100%;
+        }
+
+        .pl {
+            flex: 0 0 50%;
+            max-width: 100%;
+            min-height: 100%;
+            margin-top: 0;
+        }
+        .col-wrapper {
+            height: 300px;
+            width: 300px;
+            background: transparent;
+            height: 100%;
+            padding-top: 0 !important;
+        }
+        .button-wrapper {
+            position: absolute;
+            width: auto;
+            left: 44%;
+
+          .btn-style-form {
+              font-family: snowyText;
+              font-size: 25px;
+              border: none;
+              background: rgba(255,255,255,0.4);
+              color: red;
+              width: 170px;
+              height: 170px;
+              border-radius: 50%;
+              position: relative;
+          }
+        }
+      }
+
+      footer {
+          .row {
+              div {
+                  width: 33.333%;
+              }
+          }
+      }
+}
+
+
+  /* Portrait iPhone x */
+  @media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+      .playersform-container .col-wrapper {
+        background: transparent;
+        width: 650px;
+        height: 650px;
+
+        .content-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .players-wrapper {
+                width: 100%;
+
+                h3 {
+                    font-size: 120px;
+                }
+
+                img {
+                    width: 250px;
+                    height: 250px;
+                }
+
+                input, select {
+                    height: 80px;
+                    font-size: 30px;
+                    border-radius: 10px;
+                }
+
+
+            }
+        }
+    }
+   .playersform-container{
+        .btn-style-form {
+            width: 100%;
+            height: 145px;
+            font-size: 80px;
+            background-color: transparent;
+            border: 5px solid rgba(255,255,255,0.4);
+            line-height: 0;
+        }
+    }
+}
+
+/* Landscape iphone x */
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .game {
+        margin-top: 0;
+    }
+
+    .playersform-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 117px);
+}
+    .playersform-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+
+        .row {
+            width: 100%;
+        }
+
+        .pl {
+            flex: 0 0 50%;
+            max-width: 100%;
+            min-height: 100%;
+            margin-top: 0;
+        }
+        .col-wrapper {
+            height: 300px;
+            width: 300px;
+            background: transparent;
+            height: 100%;
+            padding-top: 0 !important;
+        }
+        .button-wrapper {
+            position: absolute;
+            width: auto;
+            left: 44%;
+
+          .btn-style-form {
+              font-family: snowyText;
+              font-size: 25px;
+              border: none;
+              background: rgba(255,255,255,0.4);
+              color: red;
+              width: 170px;
+              height: 170px;
+              border-radius: 50%;
+              position: relative;
+          }
+        }
+      }
+
+      footer {
+          .row {
+              div {
+                  width: 33.333%;
+              }
+          }
+      }
+}
+/* Galaxy S5 portrait */
+
+ @media only screen
+  and (min-device-width: 360px)
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+      .playersform-container .col-wrapper {
+        background: transparent;
+        width: 650px;
+        height: 650px;
+
+        .content-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .players-wrapper {
+                width: 100%;
+
+                h3 {
+                    font-size: 120px;
+                }
+
+                img {
+                    width: 250px;
+                    height: 250px;
+                }
+
+                input, select {
+                    height: 80px;
+                    font-size: 30px;
+                    border-radius: 10px;
+                }
+
+
+            }
+        }
+    }
+   .playersform-container{
+        .btn-style-form {
+            width: 100%;
+            height: 145px;
+            font-size: 80px;
+            background-color: transparent;
+            border: 5px solid rgba(255,255,255,0.4);
+            line-height: 0;
+        }
+    }
+}
+
+@media only screen
+  and (min-device-width: 823px)
+  and (max-device-width: 833px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .game {
+        margin-top: 0;
+    }
+
+    .playersform-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 117px);
+}
+    .playersform-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+
+        .row {
+            width: 100%;
+        }
+
+        .pl {
+            flex: 0 0 50%;
+            max-width: 100%;
+            min-height: 100%;
+            margin-top: 0;
+        }
+        .col-wrapper {
+            height: 300px;
+            width: 300px;
+            background: transparent;
+            height: 100%;
+            padding-top: 0 !important;
+        }
+        .button-wrapper {
+            position: absolute;
+            width: auto;
+            left: 44%;
+
+          .btn-style-form {
+              font-family: snowyText;
+              font-size: 25px;
+              border: none;
+              background: rgba(255,255,255,0.4);
+              color: red;
+              width: 170px;
+              height: 170px;
+              border-radius: 50%;
+              position: relative;
+          }
+        }
+      }
+
+      footer {
+          .row {
+              div {
+                  width: 33.333%;
+              }
+          }
+      }
+}
+
+
+
