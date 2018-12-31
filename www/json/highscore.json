@@ -1,12 +1,12 @@
 {
   "data": {
-    "_id": 53,
+    "_id": 54,
     "route": "/highScore",
     "title": "Highscore",
     "highscoreList": {
-      "_id": 54,
+      "_id": 55,
       "page": {
-        "_id": 53,
+        "_id": 54,
         "route": "/highScore",
         "title": "Highscore",
         "highscoreList": {
@@ -16,93 +16,93 @@
       },
       "items": [
         {
-          "_id": 156,
+          "_id": 157,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "fafa",
+          "name": "kim",
           "score": 4,
           "⚙": "Item"
         },
         {
-          "_id": 585,
+          "_id": 157,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "sdfasdf",
-          "score": 4,
-          "⚙": "Item"
-        },
-        {
-          "_id": 414,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "fdsafasf",
-          "score": 4,
-          "⚙": "Item"
-        },
-        {
-          "_id": 328,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "fdsafasf",
-          "score": 4,
-          "⚙": "Item"
-        },
-        {
-          "_id": 242,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "gfgd",
-          "score": 4,
-          "⚙": "Item"
-        },
-        {
-          "_id": 156,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Della",
+          "name": "Tommy",
           "score": 6,
           "⚙": "Item"
         },
         {
-          "_id": 146,
+          "_id": 142,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "asdfasf",
+          "name": "Glen",
           "score": 6,
           "⚙": "Item"
         },
         {
-          "_id": 232,
+          "_id": 228,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "asdfasf",
-          "score": 4,
-          "⚙": "Item"
-        },
-        {
-          "_id": 199,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "fafa",
+          "name": "Eva",
           "score": 7,
           "⚙": "Item"
         },
         {
-          "_id": 318,
+          "_id": 147,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "david",
+          "name": "Gudrun",
           "score": 8,
+          "⚙": "Item"
+        },
+        {
+          "_id": 147,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Glen",
+          "score": 9,
+          "⚙": "Item"
+        },
+        {
+          "_id": 147,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Per",
+          "score": 9,
+          "⚙": "Item"
+        },
+        {
+          "_id": 147,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Kim",
+          "score": 9,
+          "⚙": "Item"
+        },
+        {
+          "_id": 147,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Britt-marie",
+          "score": 9,
+          "⚙": "Item"
+        },
+        {
+          "_id": 147,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "Gunnar",
+          "score": 9,
           "⚙": "Item"
         }
       ],
