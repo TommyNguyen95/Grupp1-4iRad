@@ -7,5 +7,6 @@ class Slot extends Component {
     this.animate= 0;
     this.gameBoard=gameBoard;
     this.miniBounce=0;
+    this.winningLine=0;
   }
 }
