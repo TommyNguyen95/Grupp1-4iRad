@@ -25,8 +25,8 @@ main {
 .start-section {
     font-family: snowyText;    
     .row {
-        margin-top: 20vh;
-        margin-bottom:10vh;
+        margin-top: 15vh;
+        margin-bottom:5vh;
     }
     h2 {
     font-size:60px;    
@@ -34,10 +34,10 @@ main {
     }
     
     .start-welcome{
-        margin-bottom:10vh;
+        margin-bottom:5vh;
         width: 24rem;
         height:23rem;
-        border:6px solid red;
+        
         background-color:rgba(255, 255, 255, 0.5);
         color:red;
         animation: startAnim 0.4s linear, startBounce 0.4s ease-in-out;
@@ -63,10 +63,10 @@ main {
     }
     
     .start-image {
-        margin-bottom:10vh;
+        margin-bottom:5vh;
         width: 24rem;
         height:23rem;
-        border:6px solid red;
+        
         background-image:url(/images/connect4.png); 
         background-size:cover;
         animation: startAnim 0.3s linear, startBounce 0.4s ease-in-out;
@@ -74,20 +74,20 @@ main {
 
     }
     .start-links {
-        margin-bottom:10vh;
+        margin-bottom:5vh;
         width: 24rem;
         height:23rem;
-        border:6px solid red;
+        
         animation: startAnim 0.5s linear, startBounce 0.4s ease-in-out;
         animation-delay: 0s, 0.5s;
         background-color:rgba(255, 255, 255, 0.5);
         a img {
             opacity:0.8;
-            border:2px solid red;
+            border:2px solid rgba(255, 255, 255, 0.5);
         }
         a img:hover {
             opacity:1;
-            border:1px solid red;
+            border:0px solid rgba(255, 255, 255, 0.5);
         }
         h3 {
             font-size:40px;
