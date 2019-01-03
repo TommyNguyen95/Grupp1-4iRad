@@ -2,17 +2,11 @@
 
 .col-wrapper{
     background: rgba(255,255, 255, 0.4 );
-    border-radius: 50%;
-    width: 390px;
-    height: 390px;
+    border-radius: 20%;
+    width: 100%;
     display:inline-block;
-    float:none;
-    text-align:left;
-    margin-right:-4px;
     text-align: center;
-    border: 6px solid red;
 }
-
 
 .pl{
     margin-top: 40px;
@@ -39,17 +33,16 @@ h3{
 }
 
 .btn-style-form{
-    font-family: snowyText;
-    font-size: 25px;
-    border: none;
     background: rgba(255, 255, 255, 0.4);
+    font-family: snowyText;
+    font-size: 45px;
+    border: none;
+    border-radius: 20%;
     color:red;
 }
 
 .btn-style-form:hover{
     background: url("goldbg.jpg");
     text-decoration: underline;
-    font-size: 30px;
 }
 }
-

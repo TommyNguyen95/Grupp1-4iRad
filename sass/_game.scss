@@ -31,9 +31,9 @@
 }
  .slots{
 //   box-sizing: border-box;
-//   margin-right: 5px;     
+//   margin-right: 5px;
      width: calc(14.28%);
-//   padding-top: calc(13%);  
+//   padding-top: calc(13%);
 //   border: 1px solid black;
 //   background-color:rgb(233, 233, 233);
 //   border-radius: 50%;
@@ -45,7 +45,7 @@
   padding-top: 100%;
   position:relative;
 }
- 
+
 .slots > div > div {
   position:absolute;
   top:10%;
@@ -64,7 +64,7 @@
 
 .player2 {
   background-image:url('/images/yellowToken.png');
-  background-size: cover; 
+  background-size: cover;
 }
 
 .current-player {
@@ -76,12 +76,12 @@
 
 .animate1{
   background-image:url('/images/redToken.png');
-  background-size: cover; 
+  background-size: cover;
 }
 
 .animate2{
   background-image:url('/images/yellowToken.png');
-  background-size: cover; 
+  background-size: cover;
 }
 
 .mini-bounce1{
@@ -92,14 +92,14 @@
 .winning-line1{
   animation: winningLine 1s ease-in-out;
   background-image:url('/images/p1win.png');
-  background-size: cover; 
-  
+  background-size: cover;
+
 }
 .winning-line2{
   animation: winningLine 1s ease-in-out;
   background-image:url('/images/p2win.png');
-  background-size: cover; 
-  
+  background-size: cover;
+
 }
 
 @media screen and (max-width: 368px) {
