@@ -1,85 +1,81 @@
-<section class="players-form container">
-    <form>
-            <div class="row justify-content-md-center my-4">
-                <h3 class="players">Player 1</h3>
-            </div>
-            <div class="form-row justify-content-md-center">
-                <div class="row">
-                    <div class="col-12">
-                        <input type="text" id="name1" class="form-control" placeholder="Type your name">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="form-row align-items-center justify-content-md-center">
-                        <div class="col-auto my-1">
-                            <select class="custom-select type-wrapper mr-sm-2" id="type1">
-                                <option selected>Choose type...</option>
-                                <option>Human</option>
-                                <option>Computer</option>
-                            </select>
+<section>
+    <form class="playersform-wrapper">
+        <div class="container playersform-container">
+            <div class="row my-4">
+                <div class="col-12 col-lg-6 pl">
+                    <div class="col-wrapper pt-5 pb-5">
+                        <div class="content-wrapper">
+                            <div class="players-wrapper">
+                                <h3>Player 1</h3>
+                                <img src="/images/santa-p1.png" class="mb-3" alt="santaclaus">
+                                <div class="col-8 offset-2">
+                                    <input type="text" id="name1" class="form-control mb-2" placeholder="Name(2-10 characters)">
+                                </div>
+                                <div class="col-8 offset-2">
+                                    <select class="custom-select type-wrapper mr-sm-2" id="type1">
+                                        <option selected>Choose type...</option>
+                                        <option>Human</option>
+                                        <option>Computer</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-        </div>
-        </div>
-            <div class="row justify-content-md-center my-4">
-                <h3 class="players">Player 2</h3>
-            </div>
-            <div class="form-row justify-content-md-center">
-                <div class="row">
-                    <div class="col-12">
-                        <input type="text" id="name2" class="type-name form-control" placeholder="Type your name">
-                    </div>
-                </div>
-            </div>
-            <div class="form-row align-items-center justify-content-md-center">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="col-auto my-1">
-                            <select class="custom-select type-wrapper mr-sm-2" id="type2">
-                                <option selected>Choose type...</option>
-                                <option>Human</option>
-                                <option>Computer</option>
-                            </select>
+                <div class="col-12 col-lg-6 pl">
+                    <div class="col-wrapper pt-5 pb-5">
+                        <div class="content-wrapper">
+                            <div class="players-wrapper">
+                                <h3>Player 2</h3>
+                                <img src="/images/snowman-p2.png" class="mb-3" alt="snowman">
+                                <div class="col-8 offset-2">
+                                    <input type="text" id="name2" class="form-control mb-2" placeholder="Name(2-10 characters)">
+                                </div>
+                                <div class="col-8 offset-2">
+                                    <select class="custom-select type-wrapper mr-sm-2" id="type2">
+                                        <option selected>Choose type...</option>
+                                        <option>Human</option>
+                                        <option>Computer</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row button-wrapper justify-content-center">
+                <button type="button" class="btn start-game btn-style-form btn-primary my-5 py-3">Play the game</button>
+            </div>
         </div>
-        <div class="row justify-content-md-center">
-            <button type="button" class="btn start-game btn-style-form btn-primary mt-5">Play the game</button>
-        </div>
+
     </form>
-    <div class="modal validate-name-modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+
+
+    <div class="modal fade validate-name-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title"></h5>
+            <div class="modal-content-name">
+                <div class="modal-header header-validate-name">
                 </div>
-                <div class="modal-body">
-                    <p>Names must be 2 to 10 characters long.</p>
+                <div class="modal-body-validate">
+                    <span class="val-content">Names must be 2 to 10 characters long</span>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
-
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal validate-type-modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+
+    <div class="modal fade choose-typ-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title"></h5>
+            <div class="modal-content-type">
+                <div class="modal-header header-choose-type">
                 </div>
-                <div class="modal-body">
-                    <p>You must choose types.</p>
+                <div class="modal-body-type">
+                    <span class="type-content">You must choose type</span>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
-
                 </div>
             </div>
         </div>

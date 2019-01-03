@@ -1,9 +1,12 @@
 body > div {
+  background-repeat: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
-
+ }
+ 
 main {
   flex: 1; 
 }
@@ -12,6 +15,7 @@ footer {
   color: white;
   font-size: 15px;
   text-align: center;
+  font-family: snowyText;
   p {
      margin-bottom:5px;
      margin-top:5px;

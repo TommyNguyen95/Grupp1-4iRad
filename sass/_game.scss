@@ -4,11 +4,15 @@
 }
 
 .dav-game-board{
-    background-color: red;
-    padding:5px;
-    border:10px green;
-    border-style: ridge;
-  }
+    margin-top: 10px;
+    background-image: url();
+    max-width: 40%;
+    margin: 0 auto;
+    border-radius: 17px 17px 17px 17px;
+    -moz-border-radius: 17px 17px 17px 17px;
+    -webkit-border-radius: 17px 17px 17px 17px;
+    border: 6px solid red;
+}
 
 @keyframes miniBounce {
   0%{ -webkit-transform:translateY(0px)rotate(-45deg);}
@@ -18,14 +22,39 @@
   100%{ -webkit-transform:translateY(0)rotate(-45deg) ;}
 }
 
-.slots{
-  width: calc(100% / 7);
-  padding-top: calc(100% / 7);  
-  border: 1px solid black;
-  background-color:white;
+@keyframes winningLine {
+  0%{ -webkit-transform:rotate(0deg);}
+  30%{ -webkit-transform:rotate(60deg) ;}
+  60%{ -webkit-transform:rotate(120deg) ;}
+  70%{ -webkit-transform:rotate(180deg) ;}
+  100%{ -webkit-transform:rotate(360deg) ;}
+}
+ .slots{
+//   box-sizing: border-box;
+//   margin-right: 5px;
+     width: calc(14.28%);
+//   padding-top: calc(13%);
+//   border: 1px solid black;
+//   background-color:rgb(233, 233, 233);
+//   border-radius: 50%;
+//   cursor:pointer;
+//   display:inline-block;
+}
+
+.slots > div {
+  padding-top: 100%;
+  position:relative;
+}
+
+.slots > div > div {
+  position:absolute;
+  top:10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
-  cursor:pointer;
-  display:inline-block;
+  border: 3px solid red;
+  background-color: white;
 }
 
 .player1 {
@@ -35,25 +64,24 @@
 
 .player2 {
   background-image:url('/images/yellowToken.png');
-  background-size: cover; 
+  background-size: cover;
 }
 
 .current-player {
-  font-size: 1.5vw;
+  font-size: 3vw;
   text-align: center;
-  margin-bottom: 5px;
   font-family: snowtext;
   color: red;
 }
 
 .animate1{
   background-image:url('/images/redToken.png');
-  background-size: cover; 
+  background-size: cover;
 }
 
 .animate2{
   background-image:url('/images/yellowToken.png');
-  background-size: cover; 
+  background-size: cover;
 }
 
 .mini-bounce1{
@@ -61,3 +89,139 @@
 }
 
 
+.winning-line1{
+  animation: winningLine 1s ease-in-out;
+  background-image:url('/images/p1win.png');
+  background-size: cover;
+
+}
+.winning-line2{
+  animation: winningLine 1s ease-in-out;
+  background-image:url('/images/p2win.png');
+  background-size: cover;
+
+}
+
+@media screen and (max-width: 368px) {
+  .game {
+    margin-top: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dav-game-board {
+    max-width: 95%;
+  }
+  .game {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dav-game-board {
+    max-width: 95%;
+  }
+  .game {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .dav-game-board {
+    max-width: 95%;
+  }
+  .game {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .dav-game-board {
+    max-width: 80%;
+  }
+  .game {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .dav-game-board {
+    max-width: 80%;
+  }
+  .game {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .dav-game-board {
+    max-width: 70%;
+  }
+  .game {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .dav-game-board {
+    max-width: 70%;
+  }
+  .game {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .dav-game-board {
+    max-width: 65%;
+  }
+  .game {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .dav-game-board {
+    max-width: 60%;
+  }
+  .game {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .dav-game-board {
+    max-width: 55%;
+  }
+  .game {
+    margin-top: 0;
+  }
+}
+.game {
+  margin-top: 80px;
+}
+
+@media only screen and (max-device-width: 640px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 520px;
+  }
+}
+
+@media only screen and (max-device-width: 812px) and (min-device-width: 641px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 520px;
+  }
+}
+
+@media only screen and (max-device-width: 823px) and (min-device-width: 812px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 405px;
+  }
+}
+
+@media only screen and (max-device-width: 1025px) and (min-device-width: 823px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 750px;
+    min-width: 750px;
+  }
+}
