@@ -2,21 +2,20 @@
 
 .modal-content{
     background-image: url("/images/background-modal.jpg");
+    background-position: center;
     background-size: cover;
-    height: 500px;
-    width: 632px;
-    margin-left: -66px;
+    width: 100%;
 
     .modal-header{
         border: none;
 
 
         .modal-title{
-            font-size: 65px;
+            font-size: 50px;
             font-family: snowyText;
             text-align: center;
             width: 100%;
-            margin-top: 113px;
+            margin-top: 60px;
             background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -29,7 +28,7 @@
 
     .final-line{
         font-family: chrissyText;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
         background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
         -webkit-background-clip: text;
@@ -46,11 +45,11 @@
         background: none;
         position: absolute;
         top: 40px;
-        right: 9%;
+        right: 0;
         width: 181.98px;
         padding: 12px;
         border: none;
-        font-size: 41px;
+        font-size: 30px;
         font-family: snowyText;
         color: white;
     }
@@ -59,18 +58,25 @@
         background: none;
         position: absolute;
         top: 40px;
-        left: 1%;
+        left: 0;
         padding: 12px;
         border: none;
-        font-size: 41px;
+        font-size: 30px;
         font-family: snowyText;
         color: white;
     }
+
+    @media screen and (max-width: 380px) {
+        .restartButton, .link-button  {
+          font-size: 20px;
+        }
+      }
 
     .restartButton:hover, .link-button:hover{
         text-decoration: underline;
     }
 }
+
 
 /* Style characters-modal and type-modal */
 
@@ -99,20 +105,3 @@
 
     }
 }
-
-/* Galaxy S5 portrait */
-
- @media only screen
-  and (min-device-width: 360px)
-  and (max-device-width: 640px)
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) {
-      .win-modal .modal-title{
-          font-size: 82px;
-      }
-
-      .final-line{
-        font-size: 51px;
-          margin-bottom: 124px;
-      }
-    }
