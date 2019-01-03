@@ -15,7 +15,6 @@ class Game extends Component {
       'click .col5': 'dropCoinStart5',
       'click .col6': 'dropCoinStart6',
       'click .restartButton': 'startGame',
-      'click .win-modal-wrapper': 'winModal'
     });
 
     this.playerName = this.player1.name;
@@ -286,12 +285,12 @@ class Game extends Component {
     this.doIgnore = true;
 
     setTimeout(function () { $('.win-modal').modal('show'); }, 2000);
-    
+
     if (this.winner === 'Computer1' || this.winner === 'Computer2') {
     } else {
       App.highscorePage.addHiScore(this.winner, this.winCount);
     }
-    
+
 
   }
 
@@ -317,7 +316,4 @@ class Game extends Component {
     }
   }
 
-  winModal() {
-    $('.draw-modal').modal('show');
-  }
 }
