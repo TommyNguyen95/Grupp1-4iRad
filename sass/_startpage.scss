@@ -9,52 +9,113 @@
 }
 
 main {
-    background-image: url(/images/goldbg.jpg);
+    /*
+    background: lightblue;
+    background-image:
+      radial-gradient(white 60%, transparent 0), 
+      radial-gradient(grey 0%, transparent 0);
+    background-size: 150px 150px;
+    background-position: 0 0, 15px 15px;
+    */
+    background-image:url('/images/goldbg.jpg');
     background-size:cover;
 }
 
 
 .start-section {
-    h1 {
-    font-family: snowyText;
-    color: red;
-    font-size: 6vw;
+    font-family: snowyText;    
+    .row {
+        margin-top: 20vh;
+        margin-bottom:10vh;
+    }
+    h2 {
+    font-size:60px;    
+    
+    }
+    
+    .start-welcome{
+        margin-bottom:10vh;
+        width: 24rem;
+        height:23rem;
+        border:6px solid red;
+        background-color:rgba(255, 255, 255, 0.5);
+        color:red;
+        animation: startAnim 0.4s linear, startBounce 0.4s ease-in-out;
+        animation-delay: 0s, 0.4s;
+        button{
+            font-size:34px;
+            width:80px;
+            height:70px;
+            border:2px solid red;
+            border-radius:100px;            
+            background-color:rgba(255, 255, 255, 0);  
+            color: red;            
+        }
+        button:hover{
+            background-color: red;
+            color: white;
+        }
+        p {
+            font-size:36px;
+            
+                       
+        }       
+    }
+    
+    .start-image {
+        margin-bottom:10vh;
+        width: 24rem;
+        height:23rem;
+        border:6px solid red;
+        background-image:url(/images/connect4.png); 
+        background-size:cover;
+        animation: startAnim 0.3s linear, startBounce 0.4s ease-in-out;
+        animation-delay: 0s, 0.3s;
+
+    }
+    .start-links {
+        margin-bottom:10vh;
+        width: 24rem;
+        height:23rem;
+        border:6px solid red;
+        animation: startAnim 0.5s linear, startBounce 0.4s ease-in-out;
+        animation-delay: 0s, 0.5s;
+        background-color:rgba(255, 255, 255, 0.5);
+        a img {
+            opacity:0.8;
+            border:2px solid red;
+        }
+        a img:hover {
+            opacity:1;
+            border:1px solid red;
+        }
+        h3 {
+            font-size:40px;
+            color:red;
+    
+      
+        }
+        
     }
 
-    h2 {
-    font-size:3vw;
-    font-family: snowyText;
-    color:green;
-    }
-    .start-gamelinks{
-        padding:5px;
-        font-size:2vw;
-        text-align: center;
-        margin-bottom:10px;
-        .start-link{
-            padding:5px;        
-            display:block;
-            font-family:snowyText;
-            color:green;
-        }
-        h5 {
-            font-family:snowyText;
-            color:red;
-            font-size:3vw;
-        }
-    }
-    .start-welcome{
-        text-align: center;
-        padding-top:30px;        
-    }
-    .filler{
-        visibility: hidden;
-        font-size:2.4vw;
-    }
-    .start-play-btn{
-        font-family: snowyText;
-    }
 }
+
+@keyframes startAnim {
+    0%{ margin-top:-200%;}
+    
+    100%{ margin-top:0 ;}
+  }
+  
+  @keyframes startBounce {
+    0%{ -webkit-transform:translateY(0px);}
+    30%{ -webkit-transform:translateY(-30px) ;}
+    60%{ -webkit-transform:translateY(0px) ;}
+    70%{ -webkit-transform:translateY(-10px) ;}
+    100%{ -webkit-transform:translateY(0) ;}
+  }
+
+
+
 
 
 
