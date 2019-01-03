@@ -119,7 +119,7 @@ class Game extends Component {
   //This is the method with the code for dropping the tokens and switching players(activePlayer and playerName) and keeping track of
   // number of moves(moveCounter 1 and 2) and calling the method detectWin() which checks if someone won. It also checks if the next
   // player is a computer and if so calls the method doCompMove() which makes the move for the bot. Finally it checks if the board is
-  // full and if it is and noone is a winner it shows the draw-modal. (The miniBounce thing makes the animation for the bounce).
+  // full and if it is and none is a winner it shows the draw-modal. (The miniBounce thing makes the animation for the bounce).
   async dropCoin(col) {
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].value == 0) {
@@ -315,6 +315,6 @@ class Game extends Component {
   }
 
   winModal() {
-    $('.win-modal').modal('show');
+    $('.draw-modal').modal('show');
   }
 }

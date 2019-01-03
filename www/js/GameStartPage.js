@@ -4,7 +4,7 @@ class GameStartPage extends Component {
     this.addRoute('/play', 'Play');
     this.playersForm = new PlayersForm();
     this.addEvents({
-      'click .start-game': 'startGame'
+      'click .start-game': 'startGame',
     })
   }
 
@@ -15,7 +15,7 @@ class GameStartPage extends Component {
       }
     }
     catch (err) {
-      alert(err);
+      setTimeout(function () { $('.choose-typ-modal').modal('show'); });
       return;
     }
     if (this.baseEl.find('#type1').val() === 'Computer') {
@@ -34,7 +34,7 @@ class GameStartPage extends Component {
       this.player2 = (this.baseEl.find('#type2').val() === 'Human') ? (new Player(this.baseEl.find('#name2').val(), 2)) : (new Bot(2));
       this.createNewGame(this.player1, this.player2);
     } else {
-      alert('Names must be 2 to 10 letters.');
+      setTimeout(function () { $('.validate-name-modal').modal('show'); });
     }
   }
 
