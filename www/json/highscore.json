@@ -29,6 +29,15 @@
           "list": {
             "↻": "$.data.highscoreList"
           },
+          "name": "kim",
+          "score": 6,
+          "⚙": "Item"
+        },
+        {
+          "_id": 157,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
           "name": "Tommy",
           "score": 6,
           "⚙": "Item"
@@ -92,16 +101,7 @@
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "Britt-marie",
-          "score": 9,
-          "⚙": "Item"
-        },
-        {
-          "_id": 147,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Gunnar",
+          "name": "Brittaaaaa",
           "score": 9,
           "⚙": "Item"
         }
