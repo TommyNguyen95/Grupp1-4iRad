@@ -102,9 +102,18 @@
 
 }
 
+@media screen and (max-width: 368px) {
+  .game {
+    margin-top: 400px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .dav-game-board {
     max-width: 95%;
+  }
+  .game {
+    margin-top: 70px;
   }
 }
 
@@ -112,21 +121,84 @@
   .dav-game-board {
     max-width: 95%;
   }
+  .game {
+    margin-top: 60px;
+  }
 }
 
 @media screen and (max-width: 992px) {
   .dav-game-board {
     max-width: 95%;
   }
+  .game {
+    margin-top: 50px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .dav-game-board {
-    max-width: 95%;
+    max-width: 80%;
+  }
+  .game {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .dav-game-board {
+    max-width: 80%;
+  }
+  .game {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .dav-game-board {
+    max-width: 70%;
+  }
+  .game {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .dav-game-board {
+    max-width: 70%;
+  }
+  .game {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .dav-game-board {
+    max-width: 65%;
+  }
+  .game {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .dav-game-board {
+    max-width: 60%;
+  }
+  .game {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .dav-game-board {
+    max-width: 55%;
+  }
+  .game {
+    margin-top: 0;
   }
 }
 .game {
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 @media only screen and (max-device-width: 640px) and (orientation: landscape) {
