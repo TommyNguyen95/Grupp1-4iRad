@@ -1,5 +1,7 @@
 .hiscorepage{
   text-align: center;
+  background-color: rgba(217, 199, 155, 0.8);
+  box-shadow: 0px 0px 5px 3px white;
   h1{
     text-align: center;
   }
@@ -10,7 +12,7 @@
       margin-right: 0;
       margin-left: 0;
       padding-bottom: 5px;
-      border-bottom: 1px solid grey;
+      border-bottom: 1px solid black;
     }
   }
 
@@ -22,7 +24,7 @@
   margin-top:10px;
   margin-left: 0;
   padding-bottom:5px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid black;
   }
 
 }

@@ -284,11 +284,14 @@ class Game extends Component {
     this.winner = (player === 1) ? this.player1.name : this.player2.name;
     this.render();
     this.doIgnore = true;
+
+    setTimeout(function () { $('.win-modal').modal('show'); }, 2000);
+    
     if (this.winner === 'Computer1' || this.winner === 'Computer2') {
     } else {
       App.highscorePage.addHiScore(this.winner, this.winCount);
     }
-    setTimeout(function () { $('.win-modal').modal('show'); }, 2000);
+    
 
   }
 
