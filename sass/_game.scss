@@ -201,27 +201,65 @@
   margin-top: 80px;
 }
 
-@media only screen and (max-device-width: 640px) and (orientation: landscape) {
+// Galaxy s5
+@media only screen and (min-device-width: 640px) and (max-device-height: 640px) and (orientation: landscape) {
   .dav-game-board {
-    max-width: 520px;
+    max-width: 245px;
   }
 }
 
-@media only screen and (max-device-width: 812px) and (min-device-width: 641px) and (orientation: landscape) {
+// Pixel 2
+@media only screen and (min-device-width: 731px) and (max-device-width: 731px) and (orientation: landscape) {
   .dav-game-board {
-    max-width: 520px;
+    max-width: 300px;
   }
 }
 
-@media only screen and (max-device-width: 823px) and (min-device-width: 812px) and (orientation: landscape) {
+// Pixel 2 XL
+@media only screen and (min-device-width: 823px) and (max-device-width: 823px) and (orientation: landscape) {
   .dav-game-board {
-    max-width: 405px;
+    max-width: 295px;
   }
 }
 
-@media only screen and (max-device-width: 1025px) and (min-device-width: 823px) and (orientation: landscape) {
+// Iphone 5/SE
+@media only screen and (min-device-width: 568px) and (max-device-width: 568px) and (orientation: landscape) {
   .dav-game-board {
-    max-width: 750px;
-    min-width: 750px;
+    max-width: 203px;
+  }
+}
+
+// Iphone 6/7/8
+@media only screen and (min-device-width: 667px) and (max-device-width: 667px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 261px;
+  }
+}
+
+// Iphone 6/7/8 Plus
+@media only screen and (min-device-width: 736px) and (max-device-width: 736px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 287px;
+  }
+}
+
+// Iphone X
+@media only screen and (min-device-width: 812px) and (max-device-width: 812px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 240px;
+  }
+}
+
+// Ipad
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 722px;
+  }
+}
+
+// Ipad Pro
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 970px;
   }
 }
