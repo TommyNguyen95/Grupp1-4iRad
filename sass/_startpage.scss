@@ -8,15 +8,7 @@
     src: url(/fonts/decor.ttf);
 }
 
-main {
-    /*
-    background: lightblue;
-    background-image:
-      radial-gradient(white 60%, transparent 0), 
-      radial-gradient(grey 0%, transparent 0);
-    background-size: 150px 150px;
-    background-position: 0 0, 15px 15px;
-    */
+main {    
     background-image:url('/images/goldbg.jpg');
     background-size:cover;
 }
@@ -28,24 +20,15 @@ main {
         margin-top: 15vh;
         margin-bottom:5vh;
     }
-    h2 {
-    font-size:60px;    
     
-    }
     
     .start-welcome{
-        margin-bottom:5vh;
-        width: 24rem;
-        height:23rem;
-        
+        margin-bottom:5vh;        
         background-color:rgba(255, 255, 255, 0.5);
         color:red;
         animation: startAnim 0.4s linear, startBounce 0.4s ease-in-out;
         animation-delay: 0s, 0.4s;
-        button{
-            font-size:34px;
-            width:80px;
-            height:70px;
+        button{            
             border:2px solid red;
             border-radius:100px;            
             background-color:rgba(255, 255, 255, 0);  
@@ -54,19 +37,11 @@ main {
         button:hover{
             background-color: red;
             color: white;
-        }
-        p {
-            font-size:36px;
-            
-                       
-        }       
+        }        
     }
     
     .start-image {
-        margin-bottom:5vh;
-        width: 24rem;
-        height:23rem;
-        
+        margin-bottom:5vh;       
         background-image:url(/images/connect4.png); 
         background-size:cover;
         animation: startAnim 0.3s linear, startBounce 0.4s ease-in-out;
@@ -74,14 +49,12 @@ main {
 
     }
     .start-links {
-        margin-bottom:5vh;
-        width: 24rem;
-        height:23rem;
-        
+        margin-bottom:5vh;        
         animation: startAnim 0.5s linear, startBounce 0.4s ease-in-out;
         animation-delay: 0s, 0.5s;
         background-color:rgba(255, 255, 255, 0.5);
         a img {
+            border-radius:100px;
             opacity:0.8;
             border:2px solid rgba(255, 255, 255, 0.5);
         }
@@ -90,10 +63,7 @@ main {
             border:0px solid rgba(255, 255, 255, 0.5);
         }
         h3 {
-            font-size:40px;
-            color:red;
-    
-      
+            color:red;      
         }
         
     }
@@ -104,15 +74,91 @@ main {
     0%{ margin-top:-200%;}
     
     100%{ margin-top:0 ;}
-  }
+}
   
-  @keyframes startBounce {
+@keyframes startBounce {
     0%{ -webkit-transform:translateY(0px);}
     30%{ -webkit-transform:translateY(-30px) ;}
     60%{ -webkit-transform:translateY(0px) ;}
     70%{ -webkit-transform:translateY(-10px) ;}
     100%{ -webkit-transform:translateY(0) ;}
-  }
+}
+
+@media screen and (min-width: 1600px) {
+    .start-welcome, .start-image, .start-links {
+        width: 24rem;
+        height:23rem;
+        p {
+            font-size:36px;
+        }
+        button{
+            font-size:34px;
+            width:80px;
+            height:70px;
+        }
+        h2 {
+            font-size:60px;    
+            
+        }
+        h3 {
+            font-size:40px;         
+        }
+        a img {
+            width:90px;
+            height:85px;            
+        }
+    }
+}
+@media screen and (max-width: 1600px) {
+    .start-welcome, .start-image, .start-links {
+        width: 24rem;
+        height:23rem;
+        p {
+            font-size:36px;
+        }
+        button{
+            font-size:34px;
+            width:80px;
+            height:70px;
+        }
+        h2 {
+            font-size:60px;           
+        }
+        h3 {
+                font-size:40px;         
+        }
+        a img {
+            width:90px;
+            height:85px;            
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .start-welcome, .start-image, .start-links {
+        width: 20rem;
+        height:19rem;
+        p {
+            font-size:30px;
+        }
+        button{
+            font-size:29px;
+            width:70px;
+            height:60px;
+        }
+        h2 {
+            font-size:50px;           
+        }
+        h3 {
+            font-size:32px;         
+        }
+        a img {
+            width:80px;
+            height:75px;            
+        }      
+    }
+}
+
 
 
 
