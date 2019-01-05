@@ -6,7 +6,7 @@
 .dav-game-board{
     margin-top: 10px;
     background-image: url();
-    max-width: 40%;
+    max-width: 100vh;
     margin: 0 auto;
     border-radius: 17px 17px 17px 17px;
     -moz-border-radius: 17px 17px 17px 17px;
@@ -264,7 +264,7 @@
 
 /////////////////////////////////////////////////////////
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 360px) and (orientation: portrait) {
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
     margin-top: 70px
@@ -280,7 +280,7 @@
 }
 
 // Pixel 2 XL
-@media only screen and (min-device-width: 411px) and (min-device-height: 823px) and (orientation: portrait) {
+@media only screen and (max-device-width: 411px) and (min-device-height: 823px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
     margin-top: 140px;
@@ -304,7 +304,7 @@
 }
 
 // Iphone 6/7/8 Plus
-@media only screen and (min-device-width: 414px) and (max-device-width: 414px) and (orientation: portrait) {
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
     margin-top: 90px;
@@ -312,7 +312,7 @@
 }
 
 // Iphone X
-@media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (orientation: portrait) {
+@media only screen and (max-device-width: 375px) and (min-device-height: 812px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
     margin-top: 145px;
@@ -328,7 +328,7 @@
 }
 
 // Ipad Pro
-@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (orientation: portrait) {
+@media only screen and (max-device-width: 1024px) and (min-device-height: 1366px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
     margin-top: 155px;
