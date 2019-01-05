@@ -3,15 +3,23 @@
   src: url(/fonts/DSSnowfall.ttf);
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 100%;
+}
+
 .dav-game-board{
-    margin-top: 10px;
-    background-image: url();
-    max-width: 100vh;
-    margin: 0 auto;
-    border-radius: 17px 17px 17px 17px;
-    -moz-border-radius: 17px 17px 17px 17px;
-    -webkit-border-radius: 17px 17px 17px 17px;
-    border: 6px solid red;
+  max-width: 100vh;
+  margin: 0 auto;
+  border-radius: 17px 17px 17px 17px;
+  -moz-border-radius: 17px 17px 17px 17px;
+  -webkit-border-radius: 17px 17px 17px 17px;
+  border: 6px solid red;
 }
 
 @keyframes miniBounce {
@@ -30,24 +38,16 @@
   100%{ -webkit-transform:rotate(360deg) ;}
 }
  .slots{
-//   box-sizing: border-box;
-//   margin-right: 5px;
-     width: calc(14.28%);
-//   padding-top: calc(13%);
-//   border: 1px solid black;
-//   background-color:rgb(233, 233, 233);
-//   border-radius: 50%;
-//   cursor:pointer;
-//   display:inline-block;
+  width: calc(14.28%);
 }
 
 .slots > div {
   padding-top: 100%;
-  position:relative;
+  position: relative;
 }
 
 .slots > div > div {
-  position:absolute;
+  position: absolute;
   top:10%;
   left: 10%;
   width: 80%;
@@ -102,104 +102,8 @@
 
 }
 
-// @media screen and (max-width: 368px) {
-//   .game {
-//     margin-top: 400px;
-//   }
-// }
-
-// @media screen and (max-width: 600px) {
-//   .dav-game-board {
-//     max-width: 95%;
-//   }
-//   .game {
-//     margin-top: 70px;
-//   }
-// }
-
-// @media screen and (max-width: 768px) {
-//   .dav-game-board {
-//     max-width: 95%;
-//   }
-//   .game {
-//     margin-top: 60px;
-//   }
-// }
-
-// @media screen and (max-width: 992px) {
-//   .dav-game-board {
-//     max-width: 95%;
-//   }
-//   .game {
-//     margin-top: 50px;
-//   }
-// }
-
-// @media screen and (max-width: 1200px) {
-//   .dav-game-board {
-//     max-width: 80%;
-//   }
-//   .game {
-//     margin-top: 40px;
-//   }
-// }
-
-// @media screen and (max-width: 1300px) {
-//   .dav-game-board {
-//     max-width: 80%;
-//   }
-//   .game {
-//     margin-top: 30px;
-//   }
-// }
-
-// @media screen and (max-width: 1400px) {
-//   .dav-game-board {
-//     max-width: 70%;
-//   }
-//   .game {
-//     margin-top: 0;
-//   }
-// }
-
-// @media screen and (max-width: 1500px) {
-//   .dav-game-board {
-//     max-width: 70%;
-//   }
-//   .game {
-//     margin-top: 0;
-//   }
-// }
-
-// @media screen and (max-width: 1600px) {
-//   .dav-game-board {
-//     max-width: 65%;
-//   }
-//   .game {
-//     margin-top: 0;
-//   }
-// }
-
-// @media screen and (max-width: 1700px) {
-//   .dav-game-board {
-//     max-width: 60%;
-//   }
-//   .game {
-//     margin-top: 0;
-//   }
-// }
-
-// @media screen and (max-width: 1800px) {
-//   .dav-game-board {
-//     max-width: 55%;
-//   }
-//   .game {
-//     margin-top: 0;
-//   }
-// }
-
 // Landscape
-// Galaxy s5
+// Galaxy S5
 @media only screen and (min-device-width: 640px) and (max-device-width: 640px) and (orientation: landscape) {
   .dav-game-board {
     max-width: 338px;
@@ -262,12 +166,12 @@
   }
 }
 
-/////////////////////////////////////////////////////////
-
+//Portrait
+// Galaxy S5
 @media only screen and (max-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 70px
+    margin-top: 25px;
   }
 }
 
@@ -275,7 +179,7 @@
 @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 95px;
+    margin-top: 50px;
   }
 }
 
@@ -283,7 +187,7 @@
 @media only screen and (max-device-width: 411px) and (min-device-height: 823px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 140px;
+    margin-top: 95px;
   }
 }
 
@@ -291,7 +195,7 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 320px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 55px;
+    margin-top: 10px;
   }
 }
 
@@ -299,7 +203,7 @@
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 75px;
+    margin-top: 30px;
   }
 }
 
@@ -307,7 +211,7 @@
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 90px;
+    margin-top: 50px;
   }
 }
 
@@ -315,7 +219,7 @@
 @media only screen and (max-device-width: 375px) and (min-device-height: 812px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 145px;
+    margin-top: 100px;
   }
 }
 
@@ -323,7 +227,6 @@
 @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 80px;
   }
 }
 
@@ -331,6 +234,5 @@
 @media only screen and (max-device-width: 1024px) and (min-device-height: 1366px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 155px;
   }
 }
