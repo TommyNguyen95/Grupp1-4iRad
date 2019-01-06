@@ -31,10 +31,8 @@ main {
 }
 
 @keyframes winningLine {
+  
   0%{ -webkit-transform:rotate(0deg);}
-  30%{ -webkit-transform:rotate(60deg) ;}
-  60%{ -webkit-transform:rotate(120deg) ;}
-  70%{ -webkit-transform:rotate(180deg) ;}
   100%{ -webkit-transform:rotate(360deg) ;}
 }
  .slots{
@@ -90,14 +88,16 @@ main {
 
 
 .winning-line1{
-  animation: winningLine 1s ease-in-out;
-  background-image:url('/images/p1win.png');
+  
+  animation: winningLine 0.8s infinite;
+  background-image:url('/images/redToken.png');
   background-size: cover;
 
 }
 .winning-line2{
-  animation: winningLine 1s ease-in-out;
-  background-image:url('/images/p2win.png');
+
+  animation: winningLine 0.8s infinite;
+  background-image:url('/images/yellowToken.png');
   background-size: cover;
 
 }
