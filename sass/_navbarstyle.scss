@@ -18,9 +18,18 @@ nav{
 background-color:#d9c79b;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1210px) {
   li.nav-item{
    
-    margin:  0 auto;
+    margin: 10px 0 0 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  li.nav-item{
+   
+    margin: 0 auto;
+    width: 50vw;
+
   }
 }
