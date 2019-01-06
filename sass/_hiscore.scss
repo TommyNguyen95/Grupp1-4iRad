@@ -8,6 +8,11 @@
     color: red;
     font-size: 70px;
   }
+  @media screen and (max-width: 321px) {
+    h1 {
+      font-size: 60px;
+    }
+  }
 
   .rank {
     padding:0;
