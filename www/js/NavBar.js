@@ -29,5 +29,11 @@ class NavBar extends Component {
     }
      this.render();
   }
+
+  goPlayPage(){
+    if (window.location.href === 'http://localhost:3000/play'){
+      this.navItems[1].name = 'Restart'
+  }
+  }
   
 }
