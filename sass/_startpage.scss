@@ -159,6 +159,57 @@ main {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .start-welcome, .start-image, .start-links {
+        width: 16rem;
+        height:15rem;
+        p {
+            font-size:22px;
+        }
+        button{
+            font-size:21px;
+            width:60px;
+            height:45px;
+        }
+        h2 {
+            font-size:40px;           
+        }
+        h3 {
+            font-size:24px;         
+        }
+        a img {
+            width:62px;
+            height:59px;            
+        }      
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .start-welcome, .start-image, .start-links {
+        width: 20rem;
+        height:19rem;
+        p {
+            font-size:30px;
+        }
+        button{
+            font-size:29px;
+            width:70px;
+            height:60px;
+        }
+        h2 {
+            font-size:50px;           
+        }
+        h3 {
+            font-size:32px;         
+        }
+        a img {
+            width:80px;
+            height:75px;            
+        }      
+    }
+}
+
+
 
 
 
