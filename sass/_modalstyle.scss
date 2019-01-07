@@ -1,14 +1,13 @@
 /* Style winner-modal and equal-modal */
 
-.modal-content{
+.modal-content {
     background-image: url("/images/background-modal.jpg");
     background-position: center;
     background-size: cover;
     width: 100%;
 
-    .modal-header{
+    .modal-header {
         border: none;
-
 
         .modal-title{
             font-size: 50px;
@@ -23,10 +22,9 @@
     }
 }
 
-.modal-body{
+.modal-body {
     text-align: center;
-
-    .final-line{
+    .final-line {
         font-family: chrissyText;
         font-size: 15px;
         font-weight: bold;
@@ -36,12 +34,11 @@
     }
 }
 
-.modal-footer{
+.modal-footer {
     border: none;
     position: relative;
-
-
-    .restartButton{
+    
+    .restartButton {
         background: none;
         position: absolute;
         top: 40px;
@@ -54,7 +51,7 @@
         color: white;
     }
 
-    .link-button{
+    .link-button {
         background: none;
         position: absolute;
         top: 40px;
@@ -72,7 +69,7 @@
         }
       }
 
-    .restartButton:hover, .link-button:hover{
+    .restartButton:hover, .link-button:hover {
         text-decoration: underline;
     }
 }
@@ -80,7 +77,7 @@
 
 /* Style characters-modal and type-modal */
 
-.modal-content-name, .modal-content-type{
+.modal-content-name, .modal-content-type {
      background-image: url("/images/flakes-bg.jpg");
      background-size: cover;
      border-radius: 50%;
@@ -91,12 +88,12 @@
     }
 }
 
-.modal-body-validate, .modal-body-type{
+.modal-body-validate, .modal-body-type {
     display: flex;
     justify-content: center;
     position: relative;
 
-    .val-content, .type-content{
+    .val-content, .type-content {
         position: absolute;
         color: red;
         margin-top: 131px;
