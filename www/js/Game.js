@@ -71,9 +71,7 @@ class Game extends Component {
   //this method is for the animation of the tokens and also calls the method(dropCoin()) with the code for dropping the tokens.
   async fall(col) {
     if (this.checkType() === 'Computer') {
-      this.doIgnore=true;
-    }else{
-      this.doIgnore=false;
+     return this.doIgnore=true;
     }
     if (this.doIgnore) {
       return;
@@ -85,20 +83,23 @@ class Game extends Component {
           this.board[row][col].animate += 1;
           this.render();
           this.board[row][col].animate -= 1;
+          this.doIgnore=true;
         } else if (this.activePlayer === 2) {
           await this.sleep(45)
           this.board[row][col].animate += 2;
           this.render();
           this.board[row][col].animate -= 2;
+           this.doIgnore=true;
         }
 
 
       }
 
     }
-    this.doIgnore=false;
-    this.dropCoin(col);
     
+    this.dropCoin(col);
+    return this.doIgnore=false;
+  
   }
 
   //this method is almost the same as fall() but is used by bots. The only difference basically is that fall() gets disabled when
@@ -123,7 +124,7 @@ class Game extends Component {
     }
 
     this.dropCoin(col);
-
+    
 
   }
 
@@ -132,6 +133,7 @@ class Game extends Component {
   // player is a computer and if so calls the method doCompMove() which makes the move for the bot. Finally it checks if the board is
   // full and if it is and none is a winner it shows the draw-modal. (The miniBounce thing makes the animation for the bounce).
   async dropCoin(col) {
+    this.doIgnore=true;
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].value == 0) {
         if (this.activePlayer === 1) {
@@ -142,6 +144,7 @@ class Game extends Component {
           this.board[row][col].miniBounce += 1
           this.moveCounter2++;
         }
+        
         this.board[row][col].value = this.activePlayer;
         this.activePlayer = (this.activePlayer === 1) ? 2 : 1;
         this.playerName = (this.activePlayer === 1) ? this.player1.name : this.player2.name;
@@ -158,6 +161,7 @@ class Game extends Component {
         if (this.moveCounter1 + this.moveCounter2 === 42 && !this.winner) {
           $('.draw-modal').modal('show');
         }
+        this.doIgnore=false;
         return;
       }
     }
