@@ -172,6 +172,9 @@ main {
   .dav-game-board {
     max-width: 100%;
   }
+  .current-player {
+    font-size: 7vw;
+  }
 }
 
 // Pixel 2
@@ -179,12 +182,18 @@ main {
   .dav-game-board {
     max-width: 100%;
   }
+  .current-player {
+    font-size: 8vw;
+  }
 }
 
 // Pixel 2 XL
 @media only screen and (max-device-width: 411px) and (min-device-height: 823px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
+  }
+  .current-player {
+    font-size: 7vw;
   }
 }
 
@@ -201,12 +210,18 @@ main {
   .dav-game-board {
     max-width: 100%;
   }
+  .current-player {
+    font-size: 8vw;
+  }
 }
 
 // Iphone 6/7/8 Plus
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
+  }
+  .current-player {
+    font-size: 8vw;
   }
 }
 
@@ -215,6 +230,9 @@ main {
   .dav-game-board {
     max-width: 100%;
   }
+  .current-player {
+    font-size: 8vw;
+  }
 }
 
 // Ipad
@@ -222,11 +240,17 @@ main {
   .dav-game-board {
     max-width: 100%;
   }
+  .current-player {
+    font-size: 8vw;
+  }
 }
 
 // Ipad Pro
 @media only screen and (max-device-width: 1024px) and (min-device-height: 1366px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
+  }
+  .current-player {
+    font-size: 8vw;
   }
 }
