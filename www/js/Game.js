@@ -15,6 +15,7 @@ class Game extends Component {
       'click .col5': 'dropCoinStart5',
       'click .col6': 'dropCoinStart6',
       'click .restartButton': 'startGame',
+      'click .showScore': 'restartButton'
     });
 
     this.playerName = this.player1.name;
@@ -31,6 +32,10 @@ class Game extends Component {
     }
 
     this.startGame();
+  }
+
+  restartButton(){
+    App.NavBar.playButton();
   }
 
   //The dropcoinStart methods initiates the drop of a token when you click a column. The reason for there being seven of them instead of one
