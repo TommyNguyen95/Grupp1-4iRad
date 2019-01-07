@@ -84,7 +84,7 @@ main {
     100%{ -webkit-transform:translateY(0) ;}
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1620px) {
     .start-welcome, .start-image, .start-links {
         width: 24rem;
         height:23rem;
@@ -160,6 +160,9 @@ main {
 }
 
 @media screen and (max-width: 1000px) {
+    .container-fluid{
+        padding-left:5px;
+    }
     .start-welcome, .start-image, .start-links {
         width: 15rem;
         height:15rem;
