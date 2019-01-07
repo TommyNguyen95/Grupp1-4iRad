@@ -71,9 +71,6 @@ class Game extends Component {
   //this method is for the animation of the tokens and also calls the method(dropCoin()) with the code for dropping the tokens.
   async fall(col) {
 
-    if(this.checkType() === 'Computer'){
-      return;
-    }
     if (this.doIgnore) {
       return;
     }
