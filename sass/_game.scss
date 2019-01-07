@@ -3,12 +3,24 @@
   src: url(/fonts/DSSnowfall.ttf);
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 100%;
+}
+
 .dav-game-board{
-    background-color: red;
-    padding:5px;
-    border:10px green;
-    border-style: ridge;
-  }
+  max-width: 100vh;
+  margin: 0 auto;
+  border-radius: 17px 17px 17px 17px;
+  -moz-border-radius: 17px 17px 17px 17px;
+  -webkit-border-radius: 17px 17px 17px 17px;
+  border: 6px solid red;
+}
 
 @keyframes miniBounce {
   0%{ -webkit-transform:translateY(0px)rotate(-45deg);}
@@ -18,14 +30,29 @@
   100%{ -webkit-transform:translateY(0)rotate(-45deg) ;}
 }
 
-.slots{
-  width: calc(100% / 7);
-  padding-top: calc(100% / 7);  
-  border: 1px solid black;
-  background-color:white;
+@keyframes winningLine {
+  
+  0%{ -webkit-transform:rotate(0deg);}
+  100%{ -webkit-transform:rotate(360deg) ;}
+}
+ .slots{
+  width: calc(14.28%);
+}
+
+.slots > div {
+  padding-top: 100%;
+  position: relative;
+}
+
+.slots > div > div {
+  position: absolute;
+  top:10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
-  cursor:pointer;
-  display:inline-block;
+  border: 3px solid red;
+  background-color: white;
 }
 
 .player1 {
@@ -35,25 +62,24 @@
 
 .player2 {
   background-image:url('/images/yellowToken.png');
-  background-size: cover; 
+  background-size: cover;
 }
 
 .current-player {
-  font-size: 1.5vw;
+  font-size: 3vw;
   text-align: center;
-  margin-bottom: 5px;
   font-family: snowtext;
-  color: red;
+  color: rgb(4, 75, 10);
 }
 
 .animate1{
   background-image:url('/images/redToken.png');
-  background-size: cover; 
+  background-size: cover;
 }
 
 .animate2{
   background-image:url('/images/yellowToken.png');
-  background-size: cover; 
+  background-size: cover;
 }
 
 .mini-bounce1{
@@ -61,3 +87,170 @@
 }
 
 
+.winning-line1{
+  
+  animation: winningLine 0.8s infinite;
+  background-image:url('/images/redToken.png');
+  background-size: cover;
+
+}
+.winning-line2{
+
+  animation: winningLine 0.8s infinite;
+  background-image:url('/images/yellowToken.png');
+  background-size: cover;
+
+}
+
+// Landscape
+// Galaxy S5
+@media only screen and (min-device-width: 640px) and (max-device-width: 640px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 338px;
+  }
+}
+
+// Pixel 2
+@media only screen and (min-device-width: 731px) and (max-device-width: 731px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 393px;
+  }
+}
+
+// Pixel 2 XL
+@media only screen and (min-device-width: 823px) and (max-device-width: 823px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 389px;
+  }
+}
+
+// Iphone 5/SE
+@media only screen and (min-device-width: 568px) and (max-device-width: 568px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 295px;
+  }
+}
+
+// Iphone 6/7/8
+@media only screen and (min-device-width: 667px) and (max-device-width: 667px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 354px;
+  }
+}
+
+// Iphone 6/7/8 Plus
+@media only screen and (min-device-width: 736px) and (max-device-width: 736px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 396px;
+  }
+}
+
+// Iphone X
+@media only screen and (min-device-width: 812px) and (max-device-width: 812px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 347px;
+  }
+}
+
+// Ipad
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 784px;
+  }
+}
+
+// Ipad Pro
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) {
+  .dav-game-board {
+    max-width: 1065px;
+  }
+}
+
+//Portrait
+// Galaxy S5
+@media only screen and (max-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
+  .dav-game-board {
+    max-width: 100%;
+  }
+  .current-player {
+    font-size: 7vw;
+  }
+}
+
+// Pixel 2
+@media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) {
+  .dav-game-board {
+    max-width: 100%;
+  }
+  .current-player {
+    font-size: 8vw;
+  }
+}
+
+// Pixel 2 XL
+@media only screen and (max-device-width: 411px) and (min-device-height: 823px) and (orientation: portrait) {
+  .dav-game-board {
+    max-width: 100%;
+  }
+  .current-player {
+    font-size: 7vw;
+  }
+}
+
+// Iphone 5/SE
+@media only screen and (min-device-width: 320px) and (max-device-width: 320px) and (orientation: portrait) {
+  .dav-game-board {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}
+
+// Iphone 6/7/8
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) {
+  .dav-game-board {
+    max-width: 100%;
+  }
+  .current-player {
+    font-size: 8vw;
+  }
+}
+
+// Iphone 6/7/8 Plus
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) {
+  .dav-game-board {
+    max-width: 100%;
+  }
+  .current-player {
+    font-size: 8vw;
+  }
+}
+
+// Iphone X
+@media only screen and (max-device-width: 375px) and (min-device-height: 812px) and (orientation: portrait) {
+  .dav-game-board {
+    max-width: 100%;
+  }
+  .current-player {
+    font-size: 8vw;
+  }
+}
+
+// Ipad
+@media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
+  .dav-game-board {
+    max-width: 100%;
+  }
+  .current-player {
+    font-size: 8vw;
+  }
+}
+
+// Ipad Pro
+@media only screen and (max-device-width: 1024px) and (min-device-height: 1366px) and (orientation: portrait) {
+  .dav-game-board {
+    max-width: 100%;
+  }
+  .current-player {
+    font-size: 8vw;
+  }
+}

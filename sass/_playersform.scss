@@ -1,8 +1,20 @@
-// .type-name{
-//     border-width: 9px;
-//     border-image: repeating-linear-gradient(30deg, red, green, red 12px) 10;
-// }
-.players-form{
+.playersform-container{
+
+.col-wrapper{
+    background: rgba(255,255, 255, 0.4 );
+    border-radius: 20%;
+    width: 100%;
+    display:inline-block;
+    text-align: center;
+}
+
+.pl{
+    margin-top: 40px;
+}
+
+.row{
+    text-align: center;
+}
 
 .form-control:focus {
     box-shadow: none;
@@ -10,17 +22,28 @@
 }
 
 .type-wrapper:focus{
- box-shadow: none;
+    box-shadow: none;
     border-color: #ccc;
 }
 
-.players{
+h3{
     font-family: snowyText;
-    color: red;
+    color:red;
+    font-size: 45px;
 }
 
 .btn-style-form{
+    background: rgba(255, 255, 255, 0.4);
     font-family: snowyText;
-    font-size: 19px;
+    font-size: 45px;
+    border: none;
+    border-radius: 20%;
+    color:red;
+}
+
+.btn-style-form:hover{
+    background: url("goldbg.jpg");
+    text-decoration: underline;
 }
 }
+

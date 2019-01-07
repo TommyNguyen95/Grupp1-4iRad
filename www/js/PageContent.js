@@ -4,8 +4,10 @@ class PageContent extends Component {
     super();
     this.startPage = new StartPage();
     this.gamestartPage = new GameStartPage();
+    App.gamestartPage = this.gamestartPage;
     this.missingPage = new MissingPage();
     this.gameBoard = new GameBoard();
+    this.gameRulesPage = new GameRulesPage()
     this.highscorePage = new HighScorePage();
     App.highscorePage = this.highscorePage;
     this.loadHighscoreData();
