@@ -155,7 +155,7 @@ main {
 // Ipad
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: landscape) {
   .dav-game-board {
-    max-width: 816px;
+    max-width: 784px;
   }
 }
 
@@ -171,7 +171,6 @@ main {
 @media only screen and (max-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 25px;
   }
 }
 
@@ -179,7 +178,6 @@ main {
 @media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 50px;
   }
 }
 
@@ -187,7 +185,6 @@ main {
 @media only screen and (max-device-width: 411px) and (min-device-height: 823px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 95px;
   }
 }
 
@@ -203,7 +200,6 @@ main {
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 30px;
   }
 }
 
@@ -211,7 +207,6 @@ main {
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 50px;
   }
 }
 
@@ -219,7 +214,6 @@ main {
 @media only screen and (max-device-width: 375px) and (min-device-height: 812px) and (orientation: portrait) {
   .dav-game-board {
     max-width: 100%;
-    margin-top: 100px;
   }
 }
 
