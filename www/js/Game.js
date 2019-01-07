@@ -70,6 +70,11 @@ class Game extends Component {
 
   //this method is for the animation of the tokens and also calls the method(dropCoin()) with the code for dropping the tokens.
   async fall(col) {
+    if (this.checkType() === 'Computer') {
+      this.doIgnore=true;
+    }else{
+      this.doIgnore=false;
+    }
     if (this.doIgnore) {
       return;
     }
@@ -91,7 +96,9 @@ class Game extends Component {
       }
 
     }
+    this.doIgnore=false;
     this.dropCoin(col);
+    
   }
 
   //this method is almost the same as fall() but is used by bots. The only difference basically is that fall() gets disabled when
