@@ -16,11 +16,20 @@
       },
       "items": [
         {
-          "_id": 242,
+          "_id": 157,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "Hans",
+          "name": "adsff",
+          "score": 4,
+          "⚙": "Item"
+        },
+        {
+          "_id": 158,
+          "list": {
+            "↻": "$.data.highscoreList"
+          },
+          "name": "sdafa",
           "score": 4,
           "⚙": "Item"
         },
@@ -29,80 +38,71 @@
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "glen",
+          "name": "sdafa",
           "score": 4,
           "⚙": "Item"
         },
         {
-          "_id": 142,
+          "_id": 160,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "Tommy",
+          "name": "sdaff",
           "score": 4,
           "⚙": "Item"
         },
         {
-          "_id": 185,
+          "_id": 159,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "Kim",
-          "score": 5,
+          "name": "sdaff",
+          "score": 4,
           "⚙": "Item"
         },
         {
-          "_id": 147,
+          "_id": 158,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "Britta",
-          "score": 6,
+          "name": "sdaff",
+          "score": 4,
           "⚙": "Item"
         },
         {
-          "_id": 190,
+          "_id": 157,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "Gunnar",
-          "score": 6,
+          "name": "sdaff",
+          "score": 4,
           "⚙": "Item"
         },
         {
-          "_id": 233,
+          "_id": 160,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "Gunnar",
-          "score": 6,
+          "name": "sadfsaf",
+          "score": 4,
           "⚙": "Item"
         },
         {
-          "_id": 276,
+          "_id": 159,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "Kim",
-          "score": 7,
+          "name": "sadfsaf",
+          "score": 4,
           "⚙": "Item"
         },
         {
-          "_id": 153,
+          "_id": 158,
           "list": {
             "↻": "$.data.highscoreList"
           },
-          "name": "Kim",
-          "score": 7,
-          "⚙": "Item"
-        },
-        {
-          "_id": 281,
-          "list": {
-            "↻": "$.data.highscoreList"
-          },
-          "name": "Glen",
-          "score": 8,
+          "name": "sadfsaf",
+          "score": 4,
           "⚙": "Item"
         }
       ],

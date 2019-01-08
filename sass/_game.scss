@@ -13,7 +13,7 @@ main {
   width: 100%;
 }
 
-.dav-game-board{
+.dav-game-board {
   max-width: 100vh;
   margin: 0 auto;
   border-radius: 17px 17px 17px 17px;
@@ -35,7 +35,7 @@ main {
   0%{ -webkit-transform:rotate(0deg);}
   100%{ -webkit-transform:rotate(360deg) ;}
 }
- .slots{
+ .slots {
   width: calc(14.28%);
 }
 
@@ -72,29 +72,29 @@ main {
   color: rgb(4, 75, 10);
 }
 
-.animate1{
+.animate1 {
   background-image:url('/images/redToken.png');
   background-size: cover;
 }
 
-.animate2{
+.animate2 {
   background-image:url('/images/yellowToken.png');
   background-size: cover;
 }
 
-.mini-bounce1{
+.mini-bounce1 {
   animation: miniBounce 0.4s ease-in-out;
 }
 
 
-.winning-line1{
+.winning-line1 {
   
   animation: winningLine 0.8s infinite;
   background-image:url('/images/redToken.png');
   background-size: cover;
 
 }
-.winning-line2{
+.winning-line2 {
 
   animation: winningLine 0.8s infinite;
   background-image:url('/images/yellowToken.png');
