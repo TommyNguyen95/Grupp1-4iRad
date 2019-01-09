@@ -5,7 +5,6 @@ class Game extends Component {
     this.gameBoard = new GameBoard();
     this.player1 = player1;
     this.player2 = player2;
-
     this.addEvents({
       'click .col0': 'dropCoinStart0',
       'click .col1': 'dropCoinStart1',
@@ -17,7 +16,7 @@ class Game extends Component {
       'click .restartButton': 'startGame',
       'click .showScore': 'restartButton'
     });
-
+  
     this.playerName = this.player1.name;
     this.activePlayer = 1;
     this.winner = '';
@@ -32,8 +31,11 @@ class Game extends Component {
     }
 
     this.startGame();
+    
+
   }
 
+ 
   restartButton() {
     App.NavBar.playButton();
   }
@@ -41,48 +43,73 @@ class Game extends Component {
   //The dropcoinStart methods initiates the drop of a token when you click a column. The reason for there being seven of them instead of one
   // is because I don't know how to send an argument through addEvents.
   dropCoinStart0() {
+    if (this.checkType() === 'Computer') {
+      this.doIgnore = true;
+      return;
+    }
     this.fall(0);
-    this.doIgnore=true;
   }
 
   dropCoinStart1() {
+    if (this.checkType() === 'Computer') {
+      this.doIgnore = true;
+      return;
+    }
     this.fall(1);
-    this.doIgnore=true;
   }
 
   dropCoinStart2() {
+    if (this.checkType() === 'Computer') {
+      this.doIgnore = true;
+      return;
+    }
     this.fall(2);
-    this.doIgnore=true;
   }
 
   dropCoinStart3() {
+    if (this.checkType() === 'Computer') {
+      this.doIgnore = true;
+      return;
+    }
     this.fall(3);
-    this.doIgnore=true;
+
   }
 
   dropCoinStart4() {
+    if (this.checkType() === 'Computer') {
+      this.doIgnore = true;
+      return;
+    }
     this.fall(4);
-    this.doIgnore=true;
+
   }
 
   dropCoinStart5() {
+    if (this.checkType() === 'Computer') {
+      this.doIgnore = true;
+      return;
+    }
     this.fall(5);
-    this.doIgnore=true;
+
   }
 
   dropCoinStart6() {
+    if (this.checkType() === 'Computer') {
+      this.doIgnore = true;
+      return;
+    }
     this.fall(6);
-    this.doIgnore=true;
+
   }
 
 
   //this method is for the animation of the tokens and also calls the method(dropCoin()) with the code for dropping the tokens.
-  
- async fall(col) { 
-  if (this.winner) {
-    return;
-  }
-  if (this.doIgnore) {
+
+  async fall(col) {
+    if (this.winner) {
+      return;
+    }
+    if (this.doIgnore) {
       return;
     }
     for (let row = 0; row < 6; row++) {
@@ -104,15 +131,15 @@ class Game extends Component {
       }
 
     }
-    
-   this.dropCoin(col)
-   
+
+    this.dropCoin(col)
+
   }
 
   //this method is almost the same as fall() but is used by bots. The only difference basically is that fall() gets disabled when
   // two bots play so it isn't possible to click the board.
   async fall2(col) {
-    
+
     for (let row = 0; row < 6; row++) {
       if (this.board[row][col].value == 0) {
         if (this.activePlayer === 1) {
@@ -133,13 +160,13 @@ class Game extends Component {
 
     this.dropCoin(col);
   }
-  
+
   //This is the method with the code for dropping the tokens and switching players(activePlayer and playerName) and keeping track of
   // number of moves(moveCounter 1 and 2) and calling the method detectWin() which checks if someone won. It also checks if the next
   // player is a computer and if so calls the method doCompMove() which makes the move for the bot. Finally it checks if the board is
   // full and if it is and none is a winner it shows the draw-modal. (The miniBounce thing makes the animation for the bounce).
   async dropCoin(col) {
-    this.doIgnore=false;
+    this.doIgnore = false;
     for (let row = 5; row >= 0; row--) {
       if (this.board[row][col].value == 0) {
         if (this.activePlayer === 1) {
@@ -149,7 +176,7 @@ class Game extends Component {
         else if (this.activePlayer === 2) {
           this.board[row][col].miniBounce += 1
           this.moveCounter2++;
-          
+
         }
         this.board[row][col].value = this.activePlayer;
         this.activePlayer = (this.activePlayer === 1) ? 2 : 1;
@@ -157,7 +184,7 @@ class Game extends Component {
         this.render();
         this.board[row][col].miniBounce -= 1
         this.detectWin();
-        this.doIgnore=true;
+        this.doIgnore = true;
         await this.sleep(600);
         if (this.checkType() === 'Computer') {
           if (this.winner) {
@@ -165,16 +192,16 @@ class Game extends Component {
           }
           this.doCompMove();
         }
-        
+
         if (this.moveCounter1 + this.moveCounter2 === 42 && !this.winner) {
           $('.draw-modal').modal('show');
         }
-        this.doIgnore=false;
+        this.doIgnore = false;
         return;
       }
-      
+
     }
-    
+
   }
 
   //Method that makes moves for the bots. Generates a random number between 0 and 6 and attempts to drop a token there.
