@@ -115,11 +115,14 @@ class Game extends Component {
     for (let row = 0; row < 6; row++) {
       if (this.board[row][col].value == 0) {
         if (this.activePlayer === 1) {
+          this.doIgnore=true;
           await this.sleep(45)
           this.board[row][col].animate += 1;
           this.render();
           this.board[row][col].animate -= 1;
+          
         } else if (this.activePlayer === 2) {
+          this.doIgnore=true;
           await this.sleep(45)
           this.board[row][col].animate += 2;
           this.render();
@@ -131,7 +134,7 @@ class Game extends Component {
       }
 
     }
-
+this.doIgnore=false;
     this.dropCoin(col)
 
   }
@@ -139,7 +142,7 @@ class Game extends Component {
   //this method is almost the same as fall() but is used by bots. The only difference basically is that fall() gets disabled when
   // two bots play so it isn't possible to click the board.
   async fall2(col) {
-
+    this.doIgnore=true;
     for (let row = 0; row < 6; row++) {
       if (this.board[row][col].value == 0) {
         if (this.activePlayer === 1) {
@@ -207,6 +210,7 @@ class Game extends Component {
   //Method that makes moves for the bots. Generates a random number between 0 and 6 and attempts to drop a token there.
   // If the column is full it calls on itself and tries again.
   doCompMove() {
+    this.doIgnore=true;
     let rndNr = Math.floor(Math.random() * 7);
     if (this.checkIfColNotFull(rndNr)) {
       this.fall2(rndNr);
